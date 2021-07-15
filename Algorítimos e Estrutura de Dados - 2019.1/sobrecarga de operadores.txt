@@ -1,0 +1,62 @@
+#include<iostream>
+
+using namespace std;
+
+
+class ponto
+
+{
+
+private:
+	
+	int x,y;
+
+public:
+	
+	ponto(int x1=0,int y1=0)
+	{ x=x1; y=y1; }
+	
+	void operator ++()
+	{ ++x; ++y; }
+	
+	void printpt() const
+	
+	{ 
+	cout << '(' << x << ',' << y << ')'; 
+	}
+
+};
+
+
+
+int main()
+
+{
+	
+	ponto p1,p2(2,3),p3;
+
+	
+	cout << "\n p1= "; p1.printpt();
+	
+	cout << "\n p2= "; p2.printpt();
+
+	
+	++p1;
+	
+	++p2;
+
+	
+	cout << "\n++p1= "; p1.printpt();
+	
+	cout << "\n++p2= "; p2.printpt();
+
+	
+	p3=p1;
+
+	
+	cout << "\n p3= "; p3.printpt();
+	
+	return 0;
+
+}
+

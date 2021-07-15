@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,j,k;
+	cout << "\n Endereco de i: " << &i;
+	cout << "\n Endereco de j: " << &j;
+	cout << "\n Endereco de k: " << &k;
+}

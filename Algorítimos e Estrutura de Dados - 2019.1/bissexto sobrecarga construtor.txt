@@ -1,0 +1,86 @@
+#include <iostream>
+
+using namespace std;
+
+class data
+{
+    private:
+        int dia,mes,ano;
+
+    public:
+        int bissexto()
+        {
+            return (ano%4==0 && ano%100 || ano%400==0);
+        }
+    data(int d,int m,int a);
+    data();
+
+    void initdata(int d,int m,int a);
+    void printdata();
+    void printsigno();
+    void printbissexto();
+
+};
+
+data::data(int d,int m,int a)
+{
+    initdata(d,m,a);
+}
+
+data::data()
+{
+    int d,m,a;
+    cout << "\nDia: "; cin >>d;
+    cout << "\nMes: "; cin >>m;
+    cout << "\nAno: "; cin >>a;
+    initdata(d,m,a);
+}
+
+void data::initdata(int d,int m,int a)
+{
+    int dmes[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+    ano = a>0 ? a:1;
+    dmes[2]=dmes[2]+bissexto();
+    mes= m>=1 && m<=12 ? m:1;
+    dia = d>=1 && d<=dmes[mes] ? d:1;
+
+}
+
+void data::printdata()
+{
+
+    char nome[13][10]={"Zero","Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+
+    cout<<"\n\n"<<dia<<" de " <<nome[mes]<<" de "<<ano;
+
+
+}
+
+void data::printsigno()
+{
+    char nsigno[14][12]={"Zero","Capricornio","Aquario","Peixes","Aries","Touro","Gemeos","Cancer","Leao","Virgem","Libra","Escorpiao","Sagitario","Capicornio"};
+
+    int sig[] = {0,20,19,20,20,20,20,21,22,22,22,21,21};
+
+    if(dia < sig[mes])
+        cout<<"\nSigno: " << nsigno[mes];
+    else
+        cout<<"\nSigno: " << nsigno[mes+1];
+
+}
+
+void data::printbissexto()
+{
+    if(bissexto()) cout<<"\nAno bissexto.";
+    else cout<< "\nAno nao bissexto.";
+}
+
+int main()
+{
+    data x(14,6,1992),y(12,1,1976),z;
+
+    x.printdata();x.printsigno();x.printbissexto();
+    y.printdata();y.printsigno();y.printbissexto();
+    z.printdata();z.printsigno();z.printbissexto();
+    return 0;
+}

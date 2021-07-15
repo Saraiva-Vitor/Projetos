@@ -1,0 +1,236 @@
+#include <iostream>
+using namespace std;
+
+class node{
+public:
+    int info;
+    node *next;
+
+    node(){
+    next = 0;
+    }
+    node(int valor, node *ptr = 0){
+    info = valor;
+    next = ptr;
+    }
+};
+
+class pilha{
+private:
+    node *head;
+
+public:
+    pilha(){
+    head = 0;
+    }
+    void clear (){
+    node *tmp=head;
+    while(tmp!=NULL){
+        tmp = tmp->next;
+        delete head;
+        head = tmp;
+    }
+    }
+    bool isEmpty(){
+        return(head==NULL);
+    }
+    void push(int val)
+    {
+        head = new node(val,head);
+        head ->info = val;
+    }
+    void pop()
+    {
+        if (head!=NULL){
+            node *tmp = head;
+            head = head->next;
+            delete tmp;
+        }
+    }
+    int popEl()
+    {
+        if(head == NULL){
+            cout << "\nPilha sem nada!!!!!";
+            return -1;
+        }
+        else
+            return head->info;
+    }
+    void printpilha()
+    {
+        node *tmp = head;
+        while(tmp!=NULL){
+            cout << "\n" << tmp->info;
+            tmp = tmp->next;
+        }
+    }
+    void InverterElementos(pilha &pil);
+    void numerospares(pilha &pil);
+    void numerosnegativos(pilha &pil);
+    void media(pilha &pil);
+};
+
+void pilha::InverterElementos(pilha &pil)
+{
+    pilha PILHA1;
+    if(head!=NULL) {
+        node *tmp=head;
+        while(tmp!=NULL){
+            PILHA1.push(tmp->info);
+            tmp=tmp->next;
+        }
+    }
+    pil=PILHA1;
+}
+void pilha::numerospares(pilha &pil)
+{
+    int cont=0;
+    if(head!=NULL) {
+        node *tmp=head;
+    for(tmp =head; tmp != NULL; tmp=tmp->next)
+    {
+
+        if(tmp->info%2== 0)
+            cont++;
+    }
+    cout <<"\nQuantidade de pares: " << cont;
+ }
+}
+void pilha::numerosnegativos(pilha &pil){
+     int cont=0;
+    if(head!=NULL){
+        node *tmp=head;
+    for(tmp =head; tmp != NULL; tmp=tmp->next)
+    {
+
+        if(tmp->info < 0)
+            cont++;
+    }
+    cout <<"\nQuantidade de negativos: " << cont;
+    }
+}
+void pilha::media(pilha &pil)
+{
+    int cont=0;
+    float total=0,media=0;
+    if(head!=NULL){
+        node *tmp=head;
+    for(tmp =head; tmp != NULL; tmp=tmp->next){
+            media+=tmp->info;
+            cont++;
+    }
+    total= media/cont;
+    cout << "\nMedia = " << total;
+}
+}
+class NodeReal
+{
+public:
+    float info;
+    NodeReal *next;
+
+    NodeReal(){
+    next = 0;
+    }
+    NodeReal(float valor, NodeReal *ptr = 0){
+    info = valor;
+    next = ptr;
+    }
+};
+class PilhaReal
+{
+private:
+    NodeReal *head;
+
+public:
+    PilhaReal(){
+    head = 0;
+    }
+    void clear (){
+    NodeReal *tmp=head;
+    while(tmp!=NULL){
+        tmp = tmp->next;
+        delete head;
+        head = tmp;
+    }
+    }
+    bool isEmpty(){
+        return(head==NULL);
+    }
+    void push(float val)
+    {
+        head = new NodeReal(val,head);
+        head ->info = val;
+    }
+    void pop()
+    {
+        if (head!=NULL){
+            NodeReal *tmp = head;
+            head = head->next;
+            delete tmp;
+        }
+    }
+    int popEl()
+    {
+        if(head == NULL){
+            cout << "\nPilha sem nada!!!!!";
+            return -1;
+        }
+        else
+            return head->info;
+    }
+    void printpilha()
+    {
+        NodeReal *tmp = head;
+        while(tmp!=NULL){
+            cout << "\n" << tmp->info;
+            tmp = tmp->next;
+        }
+    }
+    void somaparimpar(float& somaP, float& somaI)
+    {
+       if(head!=NULL) {
+          NodeReal *tmp;
+          for(tmp =head; tmp != NULL; tmp=tmp->next)
+          {
+              if(tmp->info%2.0== 0)
+                   somaP=somaP+tmp->info;
+              else
+                   somaI=somaI+tmp->info;
+          }
+        }
+    }
+
+};
+int main()
+{
+    float somaIMPAR=0, somaPAR=0;
+    pilha PILHA;
+    PilhaReal PILHAR;
+    // PILHA NORMAL
+    PILHA.push(2019);
+    PILHA.push(1964);
+    PILHA.push(1915);
+    PILHA.push(1889);
+    cout << "\n Pilha:\n";
+    PILHA.printpilha();
+    PILHA.push(69);
+    PILHA.pop();
+    PILHA.InverterElementos(PILHA);
+    cout << "\n Pilha Invertida:\n";
+    PILHA.printpilha();
+    PILHA.numerospares(PILHA);
+    PILHA.numerosnegativos(PILHA);
+    PILHA.media(PILHA);
+
+    //PILHA REAL
+    PILHAR.push(3.1415);
+    PILHAR.push(2.78);
+    PILHAR.push(1.65);
+    PILHAR.push(2018.1);
+    PILHAR.push(2023.2);
+
+    PILHAR.somaparimpar(somaPAR, somaIMPAR);
+    cout << "\n Soma dos pares: " << somaPAR;
+    cout << "\n Soma dos impares: " << somaIMPAR;
+}

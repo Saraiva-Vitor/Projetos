@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class BasEmpresa
+{
+protected:
+	char nome[30], fone[15], endereco[50], cidade[30], estado[30], CEP[9];
+public:
+	BasEmpresa()
+	{
+	nome[0]='\0';
+	endereco[0]='\0';
+    	cidade[0]='\0';
+    	estado[0]='\0';
+    	CEP[0]='\0';
+    	fone[0]='\0';
+    	}
+
+	void getdata()
+	{
+	cout << "\nDados da Empresa:";
+	cout << "\n-----------------";
+	cout << "\nNome: "; cin >>  nome;
+	cout << "\nEndereco: "; cin >> endereco;
+	cout << "\nCidade: "; cin >> cidade;
+	cout << "\nEstado: "; cin >> estado;
+	cout << "\nCEP: "; cin >> CEP;
+	cout << "\nTelefone: "; cin >> fone;
+	}
+
+	void putdata()
+	{
+	cout << "\nDados da Empresa:";
+	cout << "\n-----------------";
+	cout << "\nNome: " << nome;
+	cout << "\nEndereco: " << endereco;
+	cout << "\nCidade: " << cidade;
+	cout << "\nEstado: " << estado;
+	cout << "\nCEP: " << CEP;
+	cout << "\nTelefone: " << fone;
+	}
+};
+
+int main()
+{
+	BasEmpresa empresa;
+	empresa.getdata();
+	empresa.putdata();
+	return 0;
+}
+

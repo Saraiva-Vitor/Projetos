@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+class Node {
+	public:
+		Node() {next=0;}
+		Node(int valor, Node *pe){
+			info=valor;
+			next=pe;
+		}
+		int info;
+		Node *next;
+};
+class Stack {
+	private:
+		Node *head;
+	public:
+		Stack() {head=0;}
+		void clear();
+		void printStack();
+		bool isEmpty() {
+			return (head=NULL);
+		}
+		void push(int val);
+		void pop();
+		int popel();
+};
+void Stack::push(int val) {
+	head = new Node(val,head);
+	head->info=val;
+}
+void Stack::pop() {
+	if(head!=NULL) { //if(!isEmpty)
+		Node *tmp=head->next;
+		head=tmp;
+		delete tmp;
+	}
+}
+int Stack::popel() {
+	if(head==NULL) {
+		cout<<"\nPilha Vazia";
+		return -1;
+	}
+	else
+		return head->info;
+}
+void Stack::printStack() {
+	Node *tmp=head;
+	while(tmp!=NULL) {
+		cout<<"\n"<<tmp->info;
+		tmp=tmp->next;
+	}
+}
+int main() {
+	Stack pilha;
+	pilha.push(31);
+	pilha.push(20);
+	pilha.push(10);
+	pilha.printStack();
+	pilha.pop();
+	pilha.printStack();
+}
+

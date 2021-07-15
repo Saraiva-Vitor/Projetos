@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+
+class Node
+{
+public:
+	Node() { next=0; }
+	Node(int el, Node *ptr=0)
+	{ info=el; next=ptr; }
+	int info;
+	Node *next;
+};
+
+class Queue
+{
+public:
+    Queue() { head = tail = 0; }
+	void enqueue(int);
+	int dequeue();
+	void printqueue();
+private:
+	Node *head, *tail;
+};
+
+void Queue::enqueue(int el)
+{
+	if(tail!=0)
+    {
+		tail->next = new Node(el);
+		tail = tail->next;
+	}
+	else head = tail = new Node(el);
+}
+
+int Queue::dequeue()
+{
+	int el = head->info;
+	Node *tmp = head;
+	if (head == tail)
+		head = tail = 0;
+	else head = head->next;
+	delete tmp;
+	return el;
+}
+
+void Queue::printqueue()
+{
+	Node *p=head;
+    while(p!=NULL)
+	{
+		cout<<"\n"<<p->info;
+		p=p->next;
+	}
+}
+
+int main()
+{
+    Queue fila;
+    fila.enqueue(10);
+    fila.enqueue(20);
+    fila.enqueue(15);
+    fila.printqueue();
+    fila.dequeue();
+    fila.printqueue();
+}
+
+

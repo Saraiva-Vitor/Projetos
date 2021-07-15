@@ -1,0 +1,89 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class BasEmpresa
+{
+protected:
+	char nome[30], fone[15], endereco[50], cidade[30], estado[30], CEP[9];
+public:
+    BasEmpresa()
+	{
+        nome[0]='\0';
+        endereco[0]='\0';
+        cidade[0]='\0';
+        estado[0]='\0';
+        CEP[0]='\0';
+        fone[0]='\0';
+    }
+
+	void getdata()
+	{
+	    cout << "\n-----------------";
+        cout << "\nDados da Empresa:";
+        cout << "\n-----------------";
+        cout << "\nNome: "; cin >>  nome;
+        cout << "\nEndereco: "; cin >> endereco;
+        cout << "\nCidade: "; cin >> cidade;
+        cout << "\nEstado: "; cin >> estado;
+        cout << "\nCEP: "; cin >> CEP;
+        cout << "\nTelefone: "; cin >> fone;
+	}
+
+	void putdata()
+	{
+        cout << "\n-----------------";
+        cout << "\nDados da Empresa:";
+        cout << "\n-----------------";
+        cout << "\nNome: " << nome;
+        cout << "\nEndereco: " << endereco;
+        cout << "\nCidade: " << cidade;
+        cout << "\nEstado: " << estado;
+        cout << "\nCEP: " << CEP;
+        cout << "\nTelefone: " << fone;
+	}
+};
+
+class Restaurante:public BasEmpresa
+{
+protected:
+    char tipo_de_comida[30];
+    float preco_medio_prato;
+public:
+    Restaurante():BasEmpresa() { tipo_de_comida[0]='\0'; preco_medio_prato=0; }
+    Restaurante(char tdc[], float pmp):BasEmpresa()
+    {
+        if(strlen(tdc)<30) strcpy(tipo_de_comida,tdc);
+        preco_medio_prato = pmp;
+    }
+
+    void getdata()
+    {
+        cout << "\n---------------------";
+        cout << "\nDados do Restaurante:";
+        cout << "\n---------------------";
+        cout << "\nTipo de Comida: "; cin >>  tipo_de_comida;
+        cout << "\nPreco Medio do Prato: "; cin >> preco_medio_prato;
+    }
+
+     void putdata()
+     {
+         cout << "\n---------------------";
+         cout << "\nDados do Restaurante:";
+         cout << "\n---------------------";
+         cout << "\nTipo de Comida: " << tipo_de_comida;
+         cout << "\nPreco Medio do Prato: " << preco_medio_prato;
+     }
+};
+
+int main()
+{
+	BasEmpresa empresa;
+	Restaurante restaurante;
+	empresa.getdata();
+	restaurante.getdata();
+	empresa.putdata();
+	restaurante.putdata();
+	return 0;
+}
+

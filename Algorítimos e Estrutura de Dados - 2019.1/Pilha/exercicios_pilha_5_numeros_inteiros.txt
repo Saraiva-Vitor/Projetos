@@ -1,0 +1,95 @@
+#include<iostream>
+using namespace std;
+
+class Node
+{
+public:
+	Node() { next=0; }
+	Node(int valor, Node *pr=0)
+	{ info=valor; next=pr; }
+	int info;
+	Node *next;
+};
+
+class Stack
+{
+public:
+    Stack() { head = tail = 0; }
+	void push(int);
+	void pop();
+	void printstack();
+	int popEl();
+	void somapareimpar(Stack &pil);
+private:
+	Node *head, *tail;
+};
+
+void Stack::somapareimpar(Stack &pil)
+{
+    int sp=0,si=0;
+    if(head!=NULL)
+    {
+        Node *tmp=head;
+    for(tmp;tmp!=NULL;tmp=tmp->next)
+    {
+        if((tmp->info)%2==0) { sp+=tmp->info; }
+        else { si+=tmp->info; }
+    }
+    }
+    cout << "\n Soma dos Pares= " << sp;
+    cout << "\n Soma dos Impares= " << si;
+}
+
+void Stack::push(int val)
+{
+    head = new Node (val, head);
+    head->info=val;
+}
+
+void Stack::pop()
+{
+    cout << "\n Elemento removido: " << popEl();
+    if (head != NULL)
+    {
+        Node *tmp = head;
+        head = head -> next;
+        delete tmp;
+    }
+}
+
+int Stack::popEl()
+{
+if (head == NULL)
+{
+    cout << "\n Pilha vazia!";
+    return -1;
+}
+else
+    return head ->info;
+}
+
+void Stack::printstack()
+{
+    Node *tmp=head;
+    while (tmp != NULL)
+    {
+        cout << "\n " << tmp->info;
+        tmp = tmp->next;
+    }
+}
+
+int main()
+{
+    int sp,si;
+	Stack pilha;
+	pilha.push(1);
+	pilha.push(7);
+	pilha.push(3);
+	pilha.push(9);
+	pilha.push(8);
+    pilha.printstack();
+    pilha.pop();
+    pilha.somapareimpar(pilha);
+}
+
+

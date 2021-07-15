@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class ALUNO
+{
+private:
+    int matricula;
+    float nota;
+public:
+    void printdata() const;
+    void getdata();
+    ALUNO() {}
+    ALUNO(int m,float n)
+    { matricula=m; nota=n; }
+};
+void ALUNO::getdata()
+{
+    cout << "\n Matricula: "; cin >> matricula;
+    cout << "\n Nota: "; cin >> nota;
+}
+void ALUNO::printdata() const
+{
+    cout << "\n Matricula: " << matricula;
+    cout << "\n Nota: " << nota;
+}
+int main()
+{
+    int MAX=50; //Quantidade de dados da matriz
+    ALUNO alu1(1456,8.5),alum[MAX];
+    for(int i=0;i<MAX;i++) //Preencher a Matriz
+    {
+        alum[i].getdata();
+    }
+    alu1.printdata();
+    for(int i=0;i<MAX;i++) //Mostra a Matriz
+    {
+        alum[i].printdata();
+    }
+    return 0;
+}

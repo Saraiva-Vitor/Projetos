@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+
+class ALUNO
+{
+private:
+    char nome[30];
+    int serie,grau;
+    static int n;
+public:
+    void getdata();
+    void printdata();
+    ALUNO() { n++; }
+    ~ALUNO() { n--; }
+    void qtdalunos();
+};
+int ALUNO::n=0;
+
+void ALUNO::getdata()
+{
+    cout << "\nNome: "; cin >> nome;
+    cout << "\nSerie: "; cin >> serie;
+    cout << "\nGrau: "; cin >> grau;
+}
+
+void ALUNO::printdata()
+{
+    cout << "\nNome: " << nome;
+    cout << "\nSerie: " << serie;
+    cout << "\nGrau: " << grau;
+}
+
+void ALUNO::qtdalunos()
+{
+    cout << "\nNumero de alunos: " << n;
+}
+
+int main()
+{
+    ALUNO alu1, alum[10];
+    alu1.getdata();
+    alu1.printdata();
+    alu1.qtdalunos();
+
+    //preenchendo a matriz
+    for(int i=0;i<10;i++)
+    {
+        alum[i].getdata();
+    }
+
+    //exibe os elementos
+    for(int i=0;i<10 ;i++)
+    {
+        alum[i].printdata();
+    }
+    return 0;
+}

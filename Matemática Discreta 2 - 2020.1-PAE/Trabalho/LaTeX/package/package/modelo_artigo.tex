@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%% file profile.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass[review,12pt,fleqn]{elsarticle}
+\usepackage{soul}
+\usepackage{xcolor}
+% \usepackage{lineno,hyperref}
+% \modulolinenumbers[5]
+
+\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%
+% \usepackage{blindtext}
+% \usepackage[paperheight=26cm,paperwidth=19cm,margin=0.5cm,heightrounded,showframe]{geometry}
+
+%\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\usepackage{amssymb}
+\usepackage{amsmath} % Required for some math elements
+\usepackage{revsymb} % para fazer o \openone 
+% etc.
+\usepackage[portuges]{babel}
+%
+\newcommand{\fim}{ \hfill{\mbox{$\rule{2mm}{2mm}$}}\vskip.6cm }
+\newtheorem{teo}{Teorema}
+\newtheorem{cor}[teo]{Corolário}
+\renewcommand{\appendix}{{\bf Apêndice}}
+%%%%%%%%%%%%%%%
+
+\begin{document}
+\include{texto}
+%\include{texto_body_ARn}
+%\include{texto_conc}
+%\include{ref_bib}
+%\include{texto_supp}
+\end{document}

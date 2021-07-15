@@ -1,0 +1,14 @@
+#include <iostream>
+#include <locale.h>
+using namespace std;
+//Mostra duas diferentes inicializações de strings
+int main() 
+{
+	setlocale(LC_ALL,"");
+	char s1[15] = "Saudacoes";
+	cout << "\n" << s1 << "\n";
+	for(int i=10;i>=0;i--)
+	{
+	cout << *(s1+i);
+	}
+}

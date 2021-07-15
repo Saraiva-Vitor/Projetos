@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n=5,*p=&n,&r=n;
+	cout << n  << ' ' << *p << ' ' << r << endl;  //5 5 5
+	n=7; cout << n << ' ' << *p << ' ' << r << endl; //7 7 7
+	*p=9; cout << n << ' ' << *p << ' ' << r << endl; //9 9 9
+	r=10; cout << n << ' ' << *p << ' ' << r << endl; //10 10 10
+}

@@ -1,0 +1,197 @@
+#include<iostream>
+
+using namespace std;
+
+class Node
+{
+
+public:
+	
+	Node() {
+ next=0;
+ }
+
+	Node(int el, Node *ptr=0)
+	{
+ info=el; next=ptr;
+ }
+	
+	int info;
+	
+	Node *next;
+
+};
+
+
+class Lista
+{
+
+public:
+	
+	Lista() {
+ head = tail = 0;
+ }
+
+	void addToHead(int);
+
+	void addToTail(int);
+
+	int deleteFromHead();
+
+	int deleteFromTail();
+
+	void deleteNode(int);
+
+	void printSLList();
+
+private:
+
+	Node *head, *tail;
+
+};
+
+void Lista::addToHead(int el) {
+
+	head = new Node(el,head);
+	if(tail == 0)
+
+		tail = head;
+
+}
+
+void Lista::addToTail(int el) {
+
+	if(tail!=0) {
+
+		tail->next = new Node(el);
+
+		tail = tail->next;
+
+	}
+	else head = tail = new Node(el);
+
+}
+
+int Lista::deleteFromHead() {
+
+	int el = head->info;
+
+	Node *tmp = head;
+
+	if (head == tail)
+
+		head = tail = 0;
+
+	else head = head->next;
+
+	delete tmp;
+
+	return el;
+
+}
+
+int Lista::deleteFromTail() {
+
+	int el= tail->info;
+
+	if (head==tail) { // if only one node in the list;
+
+		delete head;
+
+		head= tail = 0;
+
+	}
+	else {			// if more than one node in the list;
+
+		Node *tmp;
+
+		for (tmp = head; tmp->next != tail; tmp = tmp->next);
+
+		delete tail;
+
+		tail = tmp;
+
+		tail->next = 0;
+
+	}
+	return el;
+
+}
+
+void Lista::deleteNode(int el) {
+
+	if (head != 0)
+
+		if(head == tail && el==head->info) {
+
+			delete head;
+
+			head = tail= 0;
+	
+	}
+	else if(el == head->info) {
+
+		Node *tmp = head;
+
+		head = head->next;
+
+		delete tmp;
+
+	}
+	else {
+
+		Node *pred, *tmp;
+
+		for(pred = head, tmp = head->next;
+
+			tmp != 0 && !(tmp->info == el);
+
+			pred = pred->next, tmp=tmp->next);
+
+		if(tmp != 0) {
+
+			pred->next = tmp->next;
+
+			if (tmp == tail)
+
+				tail=pred;
+
+			delete tmp;
+
+		}
+
+	};
+
+}
+void Lista::printSLList() 
+{
+
+	Node *p=head;
+
+	while(p!=NULL)
+	{
+
+		cout<<"\n\np->info="<<p->info;
+
+		p=p->next;
+
+	}
+
+}
+
+int main() 
+{
+
+	Lista lista;
+
+	lista.addToHead(5);
+
+	lista.addToHead(15);
+
+	lista.addToTail(10);
+
+	lista.printSLList();
+
+}
+
+

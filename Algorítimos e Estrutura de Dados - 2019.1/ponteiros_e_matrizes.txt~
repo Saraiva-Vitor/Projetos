@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int M[5]={92,81,70,69,58};
+	cout << "\nImprime os valores dos elementos de uma matriz.";
+	for(int i=0;i<5;i++)
+	{
+	cout << "\n" << M[i];
+	}
+	cout << "\n Imprime com notacao ponteiro";
+	for(int i=0;i<5;i++)
+	{
+	cout << "\n" << *(M+i);
+	}
+}
