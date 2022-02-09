@@ -1,0 +1,4 @@
+com/mygdx/game01/RedDrop.java
+ com.mygdx.game01.RedDrop
+com/mygdx/game01/Drop.java
+ com.mygdx.game01.Drop

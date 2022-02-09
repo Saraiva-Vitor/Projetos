@@ -1,0 +1,1 @@
+-keep class com.mygdx.game01.AndroidLauncher { <init>(); }

@@ -1,0 +1,4 @@
+com/mygdx/game01/AndroidLauncher.java
+ com.mygdx.game01.AndroidLauncher
+com/mygdx/game01/BuildConfig.java
+ com.mygdx.game01.BuildConfig
