@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Four_Against_Darkness.iml" filepath="$PROJECT_DIR$/.idea/modules/Four_Against_Darkness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/Four_Against_Darkness.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/Four_Against_Darkness.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Four_Against_Darkness.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Four_Against_Darkness.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/Four_Against_Darkness.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/Four_Against_Darkness.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/Four_Against_Darkness.html.iml" filepath="$PROJECT_DIR$/.idea/modules/html/Four_Against_Darkness.html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ios/Four_Against_Darkness.ios.iml" filepath="$PROJECT_DIR$/.idea/modules/ios/Four_Against_Darkness.ios.iml" />
+    </modules>
+  </component>
+</project>

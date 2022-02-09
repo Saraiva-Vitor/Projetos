@@ -1,0 +1,2 @@
+com/fouragainstdarkness/game/desktop/DesktopLauncher.java
+ com.fouragainstdarkness.game.desktop.DesktopLauncher

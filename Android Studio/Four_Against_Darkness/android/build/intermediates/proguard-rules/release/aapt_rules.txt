@@ -1,0 +1,2 @@
+# Referenced at C:\Desenvolvimento de Games\Android\Projetos\FourAgainstDarkness\Four_Against_Darkness\android\build\intermediates\merged_manifests\release\AndroidManifest.xml:18
+-keep class com.fouragainstdarkness.game.AndroidLauncher { <init>(); }

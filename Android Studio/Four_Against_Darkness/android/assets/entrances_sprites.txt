@@ -1,0 +1,47 @@
+entrances_sprites.png
+size: 207, 913
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 0, 0
+  size: 207, 106
+  orig: 207, 106
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 0, 106
+  size: 186, 185
+  orig: 186, 185
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 0, 291
+  size: 187, 99
+  orig: 187, 99
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 0, 390
+  size: 195, 136
+  orig: 195, 136
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 0, 526
+  size: 120, 210
+  orig: 120, 210
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 0, 736
+  size: 166, 177
+  orig: 166, 177
+  offset: 0, 0
+  index: -1

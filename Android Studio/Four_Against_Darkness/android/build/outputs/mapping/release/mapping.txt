@@ -1,0 +1,1782 @@
+# compiler: R8
+# compiler_version: 1.5.69
+# min_api: 14
+# pg_map_id: 5f4401a
+com.badlogic.gdx.AbstractGraphics -> a.a.a.a:
+com.badlogic.gdx.AbstractInput -> a.a.a.b:
+    com.badlogic.gdx.utils.IntSet keysToCatch -> c
+    boolean[] pressedKeys -> a
+    boolean keyJustPressed -> e
+    boolean[] justPressedKeys -> b
+    int pressedKeyCount -> d
+    boolean isKeyPressed(int) -> a
+    void setCatchKey(int,boolean) -> a
+    boolean isCatchKey(int) -> b
+com.badlogic.gdx.Application -> a.a.a.c:
+    void error(java.lang.String,java.lang.String) -> a
+    com.badlogic.gdx.Application$ApplicationType getType() -> a
+    void log(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void postRunnable(java.lang.Runnable) -> a
+    com.badlogic.gdx.Graphics getGraphics() -> b
+    void log(java.lang.String,java.lang.String) -> b
+    com.badlogic.gdx.ApplicationListener getApplicationListener() -> c
+com.badlogic.gdx.Application$ApplicationType -> a.a.a.c$a:
+    com.badlogic.gdx.Application$ApplicationType Android -> a
+    com.badlogic.gdx.Application$ApplicationType HeadlessDesktop -> c
+    com.badlogic.gdx.Application$ApplicationType Desktop -> b
+    com.badlogic.gdx.Application$ApplicationType[] $VALUES -> g
+    com.badlogic.gdx.Application$ApplicationType WebGL -> e
+    com.badlogic.gdx.Application$ApplicationType Applet -> d
+    com.badlogic.gdx.Application$ApplicationType iOS -> f
+com.badlogic.gdx.ApplicationAdapter -> a.a.a.d:
+    void resize(int,int) -> a
+    void resume() -> c
+    void pause() -> d
+com.badlogic.gdx.ApplicationListener -> a.a.a.e:
+    void dispose() -> a
+    void resize(int,int) -> a
+    void resume() -> c
+    void pause() -> d
+    void create() -> e
+    void render() -> f
+com.badlogic.gdx.ApplicationLogger -> a.a.a.f:
+    void error(java.lang.String,java.lang.String) -> a
+    void log(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void log(java.lang.String,java.lang.String) -> b
+com.badlogic.gdx.Audio -> a.a.a.g:
+    com.badlogic.gdx.audio.Sound newSound(com.badlogic.gdx.files.FileHandle) -> a
+    com.badlogic.gdx.audio.Music newMusic(com.badlogic.gdx.files.FileHandle) -> b
+com.badlogic.gdx.Files -> a.a.a.h:
+    com.badlogic.gdx.files.FileHandle classpath(java.lang.String) -> a
+    com.badlogic.gdx.files.FileHandle getFileHandle(java.lang.String,com.badlogic.gdx.Files$FileType) -> a
+    java.lang.String getLocalStoragePath() -> b
+    com.badlogic.gdx.files.FileHandle internal(java.lang.String) -> b
+    java.lang.String getExternalStoragePath() -> c
+com.badlogic.gdx.Files$FileType -> a.a.a.h$a:
+    com.badlogic.gdx.Files$FileType[] $VALUES -> f
+    com.badlogic.gdx.Files$FileType Local -> e
+    com.badlogic.gdx.Files$FileType Absolute -> d
+    com.badlogic.gdx.Files$FileType External -> c
+    com.badlogic.gdx.Files$FileType Internal -> b
+    com.badlogic.gdx.Files$FileType Classpath -> a
+com.badlogic.gdx.Gdx -> a.a.a.i:
+    com.badlogic.gdx.Files files -> e
+    com.badlogic.gdx.graphics.GL30 gl30 -> h
+    com.badlogic.gdx.graphics.GL20 gl -> f
+    com.badlogic.gdx.graphics.GL20 gl20 -> g
+    com.badlogic.gdx.Graphics graphics -> b
+    com.badlogic.gdx.Application app -> a
+    com.badlogic.gdx.Audio audio -> c
+    com.badlogic.gdx.Input input -> d
+com.badlogic.gdx.Graphics -> a.a.a.j:
+    void setTitle(java.lang.String) -> a
+    boolean setWindowedMode(int,int) -> a
+    int getWidth() -> b
+    boolean supportsExtension(java.lang.String) -> b
+    int getHeight() -> c
+    boolean isGL30Available() -> d
+    com.badlogic.gdx.Graphics$DisplayMode getDisplayMode() -> e
+    void requestRendering() -> f
+    float getDeltaTime() -> g
+com.badlogic.gdx.Graphics$BufferFormat -> a.a.a.j$a:
+    int stencil -> f
+    int samples -> g
+    int a -> d
+    int depth -> e
+    boolean coverageSampling -> h
+    int g -> b
+    int b -> c
+    int r -> a
+com.badlogic.gdx.Graphics$DisplayMode -> a.a.a.j$b:
+    int bitsPerPixel -> d
+    int height -> b
+    int refreshRate -> c
+    int width -> a
+com.badlogic.gdx.Input -> a.a.a.k:
+    boolean isKeyPressed(int) -> a
+    boolean isTouched() -> d
+    int getX() -> e
+    int getY() -> f
+com.badlogic.gdx.Input$OnscreenKeyboardType -> a.a.a.k$a:
+    com.badlogic.gdx.Input$OnscreenKeyboardType Default -> a
+    com.badlogic.gdx.Input$OnscreenKeyboardType URI -> f
+    com.badlogic.gdx.Input$OnscreenKeyboardType PhonePad -> c
+    com.badlogic.gdx.Input$OnscreenKeyboardType NumberPad -> b
+    com.badlogic.gdx.Input$OnscreenKeyboardType[] $VALUES -> g
+    com.badlogic.gdx.Input$OnscreenKeyboardType Password -> e
+    com.badlogic.gdx.Input$OnscreenKeyboardType Email -> d
+com.badlogic.gdx.Input$Orientation -> a.a.a.k$b:
+    com.badlogic.gdx.Input$Orientation Landscape -> a
+    com.badlogic.gdx.Input$Orientation[] $VALUES -> c
+    com.badlogic.gdx.Input$Orientation Portrait -> b
+com.badlogic.gdx.InputProcessor -> a.a.a.l:
+    boolean keyDown(int) -> a
+    boolean keyTyped(char) -> a
+    boolean mouseMoved(int,int) -> a
+    boolean scrolled(float,float) -> a
+    boolean touchDown(int,int,int,int) -> a
+    boolean touchDragged(int,int,int) -> a
+    boolean keyUp(int) -> b
+    boolean touchUp(int,int,int,int) -> b
+com.badlogic.gdx.LifecycleListener -> a.a.a.m:
+    void dispose() -> a
+    void resume() -> c
+    void pause() -> d
+com.badlogic.gdx.Net -> a.a.a.n:
+com.badlogic.gdx.assets.AssetManager -> a.a.a.o.a:
+    void finishLoading() -> l
+com.badlogic.gdx.audio.Music -> a.a.a.p.a:
+    void dispose() -> a
+    void setLooping(boolean) -> a
+    void play() -> g
+com.badlogic.gdx.audio.Music$OnCompletionListener -> a.a.a.p.a$a:
+    void onCompletion(com.badlogic.gdx.audio.Music) -> a
+com.badlogic.gdx.audio.Sound -> a.a.a.p.b:
+    void dispose() -> a
+    long play() -> g
+com.badlogic.gdx.backends.android.AndroidApplication -> a.a.a.q.a.a:
+    com.badlogic.gdx.backends.android.AndroidNet net -> e
+    boolean useImmersiveMode -> o
+    int logLevel -> m
+    boolean hideStatusBar -> p
+    com.badlogic.gdx.backends.android.AndroidInput input -> b
+    com.badlogic.gdx.utils.SnapshotArray lifecycleListeners -> k
+    com.badlogic.gdx.backends.android.AndroidFiles files -> d
+    com.badlogic.gdx.backends.android.AndroidAudio audio -> c
+    boolean isWaitingForAudio -> r
+    android.os.Handler handler -> g
+    com.badlogic.gdx.utils.Array androidEventListeners -> l
+    com.badlogic.gdx.ApplicationLogger applicationLogger -> n
+    com.badlogic.gdx.utils.Array executedRunnables -> j
+    com.badlogic.gdx.ApplicationListener listener -> f
+    boolean firstResume -> h
+    com.badlogic.gdx.utils.Array runnables -> i
+    com.badlogic.gdx.backends.android.AndroidGraphics graphics -> a
+    int wasFocusChanged -> q
+    void addLifecycleListener(com.badlogic.gdx.LifecycleListener) -> a
+    com.badlogic.gdx.backends.android.AndroidAudio createAudio(android.content.Context,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration) -> a
+    com.badlogic.gdx.backends.android.AndroidInput createInput(com.badlogic.gdx.Application,android.content.Context,java.lang.Object,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration) -> a
+    void error(java.lang.String,java.lang.String) -> a
+    com.badlogic.gdx.Application$ApplicationType getType() -> a
+    void init(com.badlogic.gdx.ApplicationListener,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration,boolean) -> a
+    void initialize(com.badlogic.gdx.ApplicationListener,com.badlogic.gdx.backends.android.AndroidApplicationConfiguration) -> a
+    void log(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void postRunnable(java.lang.Runnable) -> a
+    void setApplicationLogger(com.badlogic.gdx.ApplicationLogger) -> a
+    void useImmersiveMode(boolean) -> a
+    void createWakeLock(boolean) -> b
+    com.badlogic.gdx.Graphics getGraphics() -> b
+    void log(java.lang.String,java.lang.String) -> b
+    com.badlogic.gdx.ApplicationListener getApplicationListener() -> c
+    void hideStatusBar(boolean) -> c
+    com.badlogic.gdx.utils.Array getExecutedRunnables() -> d
+    com.badlogic.gdx.utils.Array getRunnables() -> e
+    android.content.Context getContext() -> f
+    android.view.Window getApplicationWindow() -> g
+    com.badlogic.gdx.backends.android.AndroidInput getInput() -> h
+    com.badlogic.gdx.utils.SnapshotArray getLifecycleListeners() -> i
+    com.badlogic.gdx.backends.android.AndroidFiles createFiles() -> j
+    android.widget.FrameLayout$LayoutParams createLayoutParams() -> k
+    com.badlogic.gdx.ApplicationLogger getApplicationLogger() -> l
+    com.badlogic.gdx.Audio getAudio() -> m
+    com.badlogic.gdx.Files getFiles() -> n
+    com.badlogic.gdx.Net getNet() -> o
+    int getVersion() -> p
+com.badlogic.gdx.backends.android.AndroidApplication$1 -> a.a.a.q.a.a$a:
+    com.badlogic.gdx.backends.android.AndroidApplication this$0 -> a
+    void dispose() -> a
+    void resume() -> c
+    void pause() -> d
+com.badlogic.gdx.backends.android.AndroidApplicationBase -> a.a.a.q.a.b:
+    void useImmersiveMode(boolean) -> a
+    com.badlogic.gdx.utils.Array getExecutedRunnables() -> d
+    com.badlogic.gdx.utils.Array getRunnables() -> e
+    android.content.Context getContext() -> f
+    android.view.Window getApplicationWindow() -> g
+    com.badlogic.gdx.backends.android.AndroidInput getInput() -> h
+    com.badlogic.gdx.utils.SnapshotArray getLifecycleListeners() -> i
+com.badlogic.gdx.backends.android.AndroidApplicationConfiguration -> a.a.a.q.a.c:
+    boolean useWakelock -> n
+    int sensorDelay -> l
+    boolean hideStatusBar -> o
+    int touchSleepTime -> m
+    boolean disableAudio -> p
+    boolean useGyroscope -> i
+    boolean useCompass -> j
+    boolean useRotationVectorSensor -> k
+    int stencil -> f
+    int numSamples -> g
+    int a -> d
+    int depth -> e
+    int g -> b
+    int b -> c
+    boolean useImmersiveMode -> s
+    int r -> a
+    com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy resolutionStrategy -> r
+    boolean useGL30 -> t
+    boolean useAccelerometer -> h
+    int maxNetThreads -> u
+    int maxSimultaneousSounds -> q
+com.badlogic.gdx.backends.android.AndroidApplicationLogger -> a.a.a.q.a.d:
+    void error(java.lang.String,java.lang.String) -> a
+    void log(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void log(java.lang.String,java.lang.String) -> b
+com.badlogic.gdx.backends.android.AndroidAudio -> a.a.a.q.a.e:
+    void notifyMusicDisposed(com.badlogic.gdx.backends.android.AndroidMusic) -> a
+    void resume() -> c
+    void pause() -> d
+com.badlogic.gdx.backends.android.AndroidClipboard -> a.a.a.q.a.f:
+com.badlogic.gdx.backends.android.AndroidEventListener -> a.a.a.q.a.g:
+    void onActivityResult(int,int,android.content.Intent) -> a
+com.badlogic.gdx.backends.android.AndroidFileHandle -> a.a.a.q.a.h:
+    android.content.res.AssetManager assets -> c
+    com.badlogic.gdx.files.FileHandle child(java.lang.String) -> a
+    java.io.File file() -> b
+    long length() -> c
+    com.badlogic.gdx.files.FileHandle parent() -> f
+    java.io.InputStream read() -> h
+    android.content.res.AssetFileDescriptor getAssetFileDescriptor() -> k
+com.badlogic.gdx.backends.android.AndroidFiles -> a.a.a.q.a.i:
+    com.badlogic.gdx.backends.android.ZipResourceFile getExpansionFile() -> a
+com.badlogic.gdx.backends.android.AndroidGL20 -> a.a.a.q.a.j:
+    int[] ints2 -> b
+    int[] ints3 -> c
+    int[] ints -> a
+    byte[] buffer -> d
+    void glBindFramebuffer(int,int) -> a
+    void glBufferData(int,int,java.nio.Buffer,int) -> a
+    void glBufferSubData(int,int,int,java.nio.Buffer) -> a
+    void glClearColor(float,float,float,float) -> a
+    void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glDepthMask(boolean) -> a
+    void glDrawArrays(int,int,int) -> a
+    void glEnable(int) -> a
+    int glGenBuffer() -> a
+    java.lang.String glGetActiveUniform(int,int,java.nio.IntBuffer,java.nio.IntBuffer) -> a
+    void glGetFloatv(int,java.nio.FloatBuffer) -> a
+    void glGetProgramiv(int,int,java.nio.IntBuffer) -> a
+    void glShaderSource(int,java.lang.String) -> a
+    void glTexImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glTexParameterf(int,int,float) -> a
+    void glUniformMatrix4fv(int,int,boolean,float[],int) -> a
+    void glVertexAttribPointer(int,int,int,boolean,int,int) -> a
+    void glVertexAttribPointer(int,int,int,boolean,int,java.nio.Buffer) -> a
+    void glAttachShader(int,int) -> b
+    void glBlendFuncSeparate(int,int,int,int) -> b
+    int glCheckFramebufferStatus(int) -> b
+    void glDrawElements(int,int,int,java.nio.Buffer) -> b
+    void glFramebufferTexture2D(int,int,int,int,int) -> b
+    int glGenRenderbuffer() -> b
+    java.lang.String glGetActiveAttrib(int,int,java.nio.IntBuffer,java.nio.IntBuffer) -> b
+    void glGetShaderiv(int,int,java.nio.IntBuffer) -> b
+    int glGetUniformLocation(int,java.lang.String) -> b
+    void glTexParameteri(int,int,int) -> b
+    void glBindRenderbuffer(int,int) -> c
+    void glDrawElements(int,int,int,int) -> c
+    int glGenTexture() -> c
+    int glGetAttribLocation(int,java.lang.String) -> c
+    void glUseProgram(int) -> c
+    int glCreateProgram() -> d
+    void glFramebufferRenderbuffer(int,int,int,int) -> d
+    void glGenerateMipmap(int) -> d
+    void glGetIntegerv(int,java.nio.IntBuffer) -> d
+    void glUniform1i(int,int) -> d
+    void glBindBuffer(int,int) -> e
+    int glGenFramebuffer() -> e
+    void glLinkProgram(int) -> e
+    void glRenderbufferStorage(int,int,int,int) -> e
+    void glDeleteRenderbuffer(int) -> f
+    void glPixelStorei(int,int) -> f
+    void glBindTexture(int,int) -> g
+    java.lang.String glGetShaderInfoLog(int) -> g
+    java.lang.String glGetProgramInfoLog(int) -> h
+    void glEnableVertexAttribArray(int) -> i
+    java.lang.String glGetString(int) -> j
+    void glClear(int) -> k
+    void glDeleteFramebuffer(int) -> l
+    void glDisable(int) -> m
+    void glDisableVertexAttribArray(int) -> n
+    int glCreateShader(int) -> o
+    void glDeleteTexture(int) -> q
+    void glDeleteShader(int) -> r
+    void glDeleteProgram(int) -> s
+    void glCompileShader(int) -> t
+    void glDeleteBuffer(int) -> u
+com.badlogic.gdx.backends.android.AndroidGL30 -> a.a.a.q.a.k:
+    void glDrawArraysInstanced(int,int,int,int) -> a
+    void glDrawBuffers(int,java.nio.IntBuffer) -> a
+    void glDrawElementsInstanced(int,int,int,int,int) -> a
+    void glTexImage3D(int,int,int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glDeleteVertexArrays(int,java.nio.IntBuffer) -> b
+    void glGenVertexArrays(int,java.nio.IntBuffer) -> c
+    void glBindVertexArray(int) -> p
+com.badlogic.gdx.backends.android.AndroidGraphics -> a.a.a.q.a.l:
+    long lastFrameTime -> i
+    boolean created -> n
+    float deltaTime -> j
+    long frameId -> l
+    boolean running -> o
+    java.lang.String extensions -> h
+    long frameStart -> k
+    int frames -> m
+    boolean pause -> p
+    com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20 view -> a
+    com.badlogic.gdx.graphics.GL30 gl30 -> f
+    com.badlogic.gdx.graphics.GL20 gl20 -> e
+    int[] value -> u
+    com.badlogic.gdx.backends.android.AndroidApplicationConfiguration config -> s
+    boolean enforceContinuousRendering -> w
+    com.badlogic.gdx.backends.android.AndroidApplicationBase app -> d
+    int width -> b
+    boolean resume -> q
+    int height -> c
+    boolean destroy -> r
+    com.badlogic.gdx.graphics.glutils.GLVersion glVersion -> g
+    boolean isContinuous -> t
+    java.lang.Object synch -> v
+    boolean checkGL20() -> a
+    com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20 createGLSurfaceView(com.badlogic.gdx.backends.android.AndroidApplicationBase,com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy) -> a
+    int getAttrib(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig,int,int) -> a
+    void logConfig(javax.microedition.khronos.egl.EGLConfig) -> a
+    void setContinuousRendering(boolean) -> a
+    void setTitle(java.lang.String) -> a
+    boolean setWindowedMode(int,int) -> a
+    void setupGL(javax.microedition.khronos.opengles.GL10) -> a
+    int getWidth() -> b
+    boolean supportsExtension(java.lang.String) -> b
+    int getHeight() -> c
+    boolean isGL30Available() -> d
+    com.badlogic.gdx.Graphics$DisplayMode getDisplayMode() -> e
+    void requestRendering() -> f
+    float getDeltaTime() -> g
+    void clearManagedCaches() -> h
+    void destroy() -> i
+    android.opengl.GLSurfaceView$EGLConfigChooser getEglConfigChooser() -> j
+    android.view.View getView() -> k
+    boolean isContinuousRendering() -> l
+    void logManagedCachesStatus() -> m
+    void onPauseGLSurfaceView() -> n
+    void onResumeGLSurfaceView() -> o
+    void pause() -> p
+    void preserveEGLContextOnPause() -> q
+    void resume() -> r
+    void updatePpi() -> s
+    void updateSafeAreaInsets() -> t
+com.badlogic.gdx.backends.android.AndroidGraphics$1 -> a.a.a.q.a.l$a:
+    com.badlogic.gdx.backends.android.AndroidGraphics this$0 -> a
+com.badlogic.gdx.backends.android.AndroidGraphics$AndroidDisplayMode -> a.a.a.q.a.l$b:
+com.badlogic.gdx.backends.android.AndroidInput -> a.a.a.q.a.m:
+    void onPause() -> a
+    void setKeyboardAvailable(boolean) -> a
+    void processEvents() -> b
+    void onResume() -> c
+com.badlogic.gdx.backends.android.AndroidMouseHandler -> a.a.a.q.a.n:
+    int deltaY -> b
+    int deltaX -> a
+    boolean onGenericMotion(android.view.MotionEvent,com.badlogic.gdx.backends.android.DefaultAndroidInput) -> a
+    void postTouchEvent(com.badlogic.gdx.backends.android.DefaultAndroidInput,int,int,int,int,int,long) -> a
+com.badlogic.gdx.backends.android.AndroidMusic -> a.a.a.q.a.o:
+    com.badlogic.gdx.backends.android.AndroidAudio audio -> a
+    com.badlogic.gdx.audio.Music$OnCompletionListener onCompletionListener -> e
+    android.media.MediaPlayer player -> b
+    boolean isPrepared -> c
+    boolean wasPlaying -> d
+    void dispose() -> a
+    void setLooping(boolean) -> a
+    boolean isPlaying() -> b
+    void pause() -> c
+    void play() -> g
+com.badlogic.gdx.backends.android.AndroidMusic$1 -> a.a.a.q.a.o$a:
+    com.badlogic.gdx.backends.android.AndroidMusic this$0 -> a
+com.badlogic.gdx.backends.android.AndroidNet -> a.a.a.q.a.p:
+com.badlogic.gdx.backends.android.AndroidSound -> a.a.a.q.a.q:
+    android.media.SoundPool soundPool -> a
+    com.badlogic.gdx.utils.IntArray streamIds -> c
+    int soundId -> b
+    void dispose() -> a
+    long play(float) -> a
+    long play() -> g
+com.badlogic.gdx.backends.android.AndroidTouchHandler -> a.a.a.q.a.r:
+    void onTouch(android.view.MotionEvent,com.badlogic.gdx.backends.android.DefaultAndroidInput) -> a
+    void postTouchEvent(com.badlogic.gdx.backends.android.DefaultAndroidInput,int,int,int,int,int,long) -> a
+    boolean supportsMultitouch(android.content.Context) -> a
+    int toGdxButton(int) -> a
+com.badlogic.gdx.backends.android.AndroidVisibilityListener -> a.a.a.q.a.s:
+    void createListener(com.badlogic.gdx.backends.android.AndroidApplicationBase) -> a
+com.badlogic.gdx.backends.android.AndroidVisibilityListener$1 -> a.a.a.q.a.s$a:
+    com.badlogic.gdx.backends.android.AndroidApplicationBase val$application -> a
+com.badlogic.gdx.backends.android.AndroidVisibilityListener$1$1 -> a.a.a.q.a.s$a$a:
+    com.badlogic.gdx.backends.android.AndroidVisibilityListener$1 this$1 -> a
+com.badlogic.gdx.backends.android.AndroidZipFileHandle -> a.a.a.q.a.t:
+    java.lang.String path -> g
+    long fdLength -> e
+    com.badlogic.gdx.backends.android.ZipResourceFile expansionFile -> f
+    boolean hasAssetFd -> d
+    com.badlogic.gdx.files.FileHandle child(java.lang.String) -> a
+    long length() -> c
+    com.badlogic.gdx.files.FileHandle parent() -> f
+    java.io.InputStream read() -> h
+    android.content.res.AssetFileDescriptor getAssetFileDescriptor() -> k
+    java.lang.String getPath() -> l
+    void initialize() -> m
+com.badlogic.gdx.backends.android.DefaultAndroidAudio -> a.a.a.q.a.u:
+    android.media.AudioManager manager -> b
+    android.media.SoundPool soundPool -> a
+    java.util.List musics -> c
+    void dispose() -> a
+    com.badlogic.gdx.audio.Sound newSound(com.badlogic.gdx.files.FileHandle) -> a
+    void notifyMusicDisposed(com.badlogic.gdx.backends.android.AndroidMusic) -> a
+    com.badlogic.gdx.audio.Music newMusic(com.badlogic.gdx.files.FileHandle) -> b
+    void resume() -> c
+    void pause() -> d
+com.badlogic.gdx.backends.android.DefaultAndroidFiles -> a.a.a.q.a.v:
+    com.badlogic.gdx.backends.android.ZipResourceFile expansionFile -> d
+    android.content.res.AssetManager assets -> c
+    java.lang.String externalFilesPath -> a
+    java.lang.String localpath -> b
+    com.badlogic.gdx.files.FileHandle classpath(java.lang.String) -> a
+    com.badlogic.gdx.backends.android.ZipResourceFile getExpansionFile() -> a
+    com.badlogic.gdx.files.FileHandle getFileHandle(java.lang.String,com.badlogic.gdx.Files$FileType) -> a
+    com.badlogic.gdx.files.FileHandle getZipFileHandleIfExists(com.badlogic.gdx.files.FileHandle,java.lang.String) -> a
+    java.lang.String initExternalFilesPath(android.content.ContextWrapper) -> a
+    java.lang.String getLocalStoragePath() -> b
+    com.badlogic.gdx.files.FileHandle internal(java.lang.String) -> b
+    java.lang.String getExternalStoragePath() -> c
+com.badlogic.gdx.backends.android.DefaultAndroidInput -> a.a.a.q.a.w:
+    com.badlogic.gdx.InputProcessor processor -> H
+    com.badlogic.gdx.backends.android.AndroidMouseHandler mouseHandler -> P
+    float[] magneticFieldValues -> E
+    boolean[] touched -> o
+    boolean hasMultitouch -> s
+    java.util.ArrayList keyEvents -> i
+    android.hardware.SensorEventListener gyroscopeListener -> L
+    float[] gyroscopeValues -> x
+    int[] deltaY -> n
+    int[] button -> p
+    boolean justTouched -> G
+    com.badlogic.gdx.utils.Pool usedKeyEvents -> f
+    float[] pressure -> r
+    int[] touchY -> l
+    boolean compassAvailable -> C
+    com.badlogic.gdx.Application app -> y
+    boolean[] justPressedButtons -> t
+    com.badlogic.gdx.Input$Orientation nativeOrientation -> J
+    android.hardware.SensorEventListener rotationVectorListener -> N
+    boolean accelerometerAvailable -> v
+    float[] rotationVectorValues -> F
+    com.badlogic.gdx.backends.android.AndroidTouchHandler touchHandler -> A
+    int sleepTime -> B
+    boolean requestFocus -> Q
+    java.util.ArrayList genericMotionListeners -> O
+    java.util.ArrayList touchEvents -> j
+    android.hardware.SensorEventListener accelerometerListener -> K
+    float[] accelerometerValues -> w
+    java.util.ArrayList keyListeners -> h
+    android.hardware.SensorEventListener compassListener -> M
+    android.hardware.SensorManager manager -> u
+    int[] realId -> q
+    android.content.Context context -> z
+    int[] touchX -> k
+    com.badlogic.gdx.utils.Pool usedTouchEvents -> g
+    int[] deltaX -> m
+    boolean rotationVectorAvailable -> D
+    com.badlogic.gdx.backends.android.AndroidApplicationConfiguration config -> I
+    int getAndroidInputType(com.badlogic.gdx.Input$OnscreenKeyboardType) -> a
+    void onPause() -> a
+    float[] resize(float[]) -> a
+    int[] resize(int[]) -> a
+    boolean[] resize(boolean[]) -> a
+    void setKeyboardAvailable(boolean) -> a
+    void processEvents() -> b
+    int lookUpPointerIndex(int) -> c
+    void onResume() -> c
+    boolean isTouched() -> d
+    int getX() -> e
+    int getY() -> f
+    int getFreePointerIndex() -> g
+    int getRotation() -> h
+    void registerSensorListeners() -> i
+    void unregisterSensorListeners() -> j
+com.badlogic.gdx.backends.android.DefaultAndroidInput$1 -> a.a.a.q.a.w$a:
+    com.badlogic.gdx.backends.android.DefaultAndroidInput$KeyEvent newObject() -> a
+    java.lang.Object newObject() -> a
+com.badlogic.gdx.backends.android.DefaultAndroidInput$2 -> a.a.a.q.a.w$b:
+    com.badlogic.gdx.backends.android.DefaultAndroidInput$TouchEvent newObject() -> a
+    java.lang.Object newObject() -> a
+com.badlogic.gdx.backends.android.DefaultAndroidInput$5 -> a.a.a.q.a.w$c:
+    int[] $SwitchMap$com$badlogic$gdx$Input$OnscreenKeyboardType -> a
+com.badlogic.gdx.backends.android.DefaultAndroidInput$KeyEvent -> a.a.a.q.a.w$d:
+    long timeStamp -> a
+    int type -> b
+    char keyChar -> d
+    int keyCode -> c
+com.badlogic.gdx.backends.android.DefaultAndroidInput$SensorListener -> a.a.a.q.a.w$e:
+    com.badlogic.gdx.backends.android.DefaultAndroidInput this$0 -> a
+com.badlogic.gdx.backends.android.DefaultAndroidInput$TouchEvent -> a.a.a.q.a.w$f:
+    int pointer -> h
+    int scrollAmountY -> f
+    long timeStamp -> a
+    int button -> g
+    int y -> d
+    int scrollAmountX -> e
+    int type -> b
+    int x -> c
+com.badlogic.gdx.backends.android.ZipResourceFile -> a.a.a.q.a.x:
+    android.content.res.AssetFileDescriptor getAssetFileDescriptor(java.lang.String) -> a
+    java.io.InputStream getInputStream(java.lang.String) -> b
+com.badlogic.gdx.backends.android.surfaceview.FillResolutionStrategy -> a.a.a.q.a.y.a:
+    com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy$MeasuredDimension calcMeasures(int,int) -> a
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20 -> a.a.a.q.a.y.b:
+    int targetGLESVersion -> d
+    java.lang.String TAG -> c
+    com.badlogic.gdx.Input$OnscreenKeyboardType onscreenKeyboardType -> b
+    com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy resolutionStrategy -> a
+    boolean checkEglError(java.lang.String,javax.microedition.khronos.egl.EGL10) -> a
+    void init(boolean,int,int) -> a
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20$1 -> a.a.a.q.a.y.b$a:
+    void sendDownUpKeyEventForBackwardCompatibility(int) -> a
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20$ConfigChooser -> a.a.a.q.a.y.b$b:
+    int[] mValue -> g
+    int[] s_configAttribs2 -> i
+    int EGL_OPENGL_ES2_BIT -> h
+    int mStencilSize -> f
+    int mAlphaSize -> d
+    int mDepthSize -> e
+    int mGreenSize -> b
+    int mBlueSize -> c
+    int mRedSize -> a
+    javax.microedition.khronos.egl.EGLConfig chooseConfig(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig[]) -> a
+    int findConfigAttrib(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig,int,int) -> a
+com.badlogic.gdx.backends.android.surfaceview.GLSurfaceView20$ContextFactory -> a.a.a.q.a.y.b$c:
+    int EGL_CONTEXT_CLIENT_VERSION -> a
+com.badlogic.gdx.backends.android.surfaceview.GdxEglConfigChooser -> a.a.a.q.a.y.c:
+    int[] mConfigAttribs -> h
+    int[] mValue -> i
+    int mStencilSize -> f
+    int mNumSamples -> g
+    int mAlphaSize -> d
+    int mDepthSize -> e
+    int mGreenSize -> b
+    int mBlueSize -> c
+    int mRedSize -> a
+    javax.microedition.khronos.egl.EGLConfig chooseConfig(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig[]) -> a
+    int findConfigAttrib(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig,int,int) -> a
+com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy -> a.a.a.q.a.y.d:
+    com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy$MeasuredDimension calcMeasures(int,int) -> a
+com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy$MeasuredDimension -> a.a.a.q.a.y.d$a:
+    int height -> b
+    int width -> a
+com.badlogic.gdx.files.FileHandle -> a.a.a.r.a:
+    java.io.File file -> a
+    com.badlogic.gdx.Files$FileType type -> b
+    com.badlogic.gdx.files.FileHandle child(java.lang.String) -> a
+    java.lang.String extension() -> a
+    java.io.File file() -> b
+    long length() -> c
+    java.lang.String name() -> d
+    java.lang.String nameWithoutExtension() -> e
+    com.badlogic.gdx.files.FileHandle parent() -> f
+    java.lang.String path() -> g
+    java.io.InputStream read() -> h
+    byte[] readBytes() -> i
+    com.badlogic.gdx.Files$FileType type() -> j
+    int estimateLength() -> k
+com.badlogic.gdx.graphics.Camera -> a.a.a.s.a:
+    com.badlogic.gdx.math.Matrix4 projection -> d
+    float viewportHeight -> k
+    com.badlogic.gdx.math.Frustum frustum -> l
+    com.badlogic.gdx.math.Vector3 direction -> b
+    float viewportWidth -> j
+    com.badlogic.gdx.math.Vector3 up -> c
+    float far -> i
+    com.badlogic.gdx.math.Matrix4 invProjectionView -> g
+    float near -> h
+    com.badlogic.gdx.math.Vector3 position -> a
+    com.badlogic.gdx.math.Matrix4 view -> e
+    com.badlogic.gdx.math.Matrix4 combined -> f
+    com.badlogic.gdx.math.Vector3 unproject(com.badlogic.gdx.math.Vector3) -> a
+    com.badlogic.gdx.math.Vector3 unproject(com.badlogic.gdx.math.Vector3,float,float,float,float) -> a
+com.badlogic.gdx.graphics.Color -> a.a.a.s.b:
+    com.badlogic.gdx.graphics.Color RED -> E
+    com.badlogic.gdx.graphics.Color CORAL -> G
+    com.badlogic.gdx.graphics.Color LIGHT_GRAY -> f
+    com.badlogic.gdx.graphics.Color PINK -> I
+    com.badlogic.gdx.graphics.Color DARK_GRAY -> h
+    com.badlogic.gdx.graphics.Color PURPLE -> K
+    float b -> c
+    float r -> a
+    com.badlogic.gdx.graphics.Color ORANGE -> A
+    com.badlogic.gdx.graphics.Color TAN -> C
+    com.badlogic.gdx.graphics.Color CHARTREUSE -> t
+    com.badlogic.gdx.graphics.Color FOREST -> v
+    com.badlogic.gdx.graphics.Color YELLOW -> x
+    com.badlogic.gdx.graphics.Color GOLDENROD -> z
+    com.badlogic.gdx.graphics.Color MAROON -> M
+    com.badlogic.gdx.graphics.Color BLUE -> l
+    com.badlogic.gdx.graphics.Color ROYAL -> n
+    com.badlogic.gdx.graphics.Color SKY -> p
+    com.badlogic.gdx.graphics.Color TEAL -> r
+    com.badlogic.gdx.graphics.Color WHITE -> e
+    com.badlogic.gdx.graphics.Color FIREBRICK -> D
+    com.badlogic.gdx.graphics.Color GRAY -> g
+    float WHITE_FLOAT_BITS -> j
+    com.badlogic.gdx.graphics.Color SCARLET -> F
+    com.badlogic.gdx.graphics.Color BLACK -> i
+    com.badlogic.gdx.graphics.Color SALMON -> H
+    com.badlogic.gdx.graphics.Color CLEAR -> k
+    com.badlogic.gdx.graphics.Color MAGENTA -> J
+    float a -> d
+    float g -> b
+    com.badlogic.gdx.graphics.Color BROWN -> B
+    com.badlogic.gdx.graphics.Color LIME -> u
+    com.badlogic.gdx.graphics.Color OLIVE -> w
+    com.badlogic.gdx.graphics.Color GOLD -> y
+    com.badlogic.gdx.graphics.Color NAVY -> m
+    com.badlogic.gdx.graphics.Color VIOLET -> L
+    com.badlogic.gdx.graphics.Color SLATE -> o
+    com.badlogic.gdx.graphics.Color CYAN -> q
+    com.badlogic.gdx.graphics.Color GREEN -> s
+    com.badlogic.gdx.graphics.Color clamp() -> a
+    int rgba8888(float,float,float,float) -> a
+    void rgba8888ToColor(com.badlogic.gdx.graphics.Color,int) -> a
+    com.badlogic.gdx.graphics.Color set(com.badlogic.gdx.graphics.Color) -> a
+    float toFloatBits() -> b
+    int toIntBits() -> c
+com.badlogic.gdx.graphics.Colors -> a.a.a.s.c:
+    com.badlogic.gdx.utils.ObjectMap map -> a
+    com.badlogic.gdx.graphics.Color get(java.lang.String) -> a
+    void reset() -> a
+com.badlogic.gdx.graphics.Cubemap -> a.a.a.s.d:
+    com.badlogic.gdx.graphics.CubemapData data -> i
+    java.util.Map managedCubemaps -> k
+    com.badlogic.gdx.assets.AssetManager assetManager -> j
+    void clearAllCubemaps(com.badlogic.gdx.Application) -> a
+    void load(com.badlogic.gdx.graphics.CubemapData) -> a
+    void invalidateAllCubemaps(com.badlogic.gdx.Application) -> b
+    boolean isManaged() -> o
+    void reload() -> p
+    java.lang.String getManagedStatus() -> q
+com.badlogic.gdx.graphics.CubemapData -> a.a.a.s.e:
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    void consumeCubemapData() -> k
+com.badlogic.gdx.graphics.GL20 -> a.a.a.s.f:
+    void glBindFramebuffer(int,int) -> a
+    void glBufferData(int,int,java.nio.Buffer,int) -> a
+    void glBufferSubData(int,int,int,java.nio.Buffer) -> a
+    void glClearColor(float,float,float,float) -> a
+    void glCompressedTexImage2D(int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glDepthMask(boolean) -> a
+    void glDrawArrays(int,int,int) -> a
+    void glEnable(int) -> a
+    int glGenBuffer() -> a
+    java.lang.String glGetActiveUniform(int,int,java.nio.IntBuffer,java.nio.IntBuffer) -> a
+    void glGetFloatv(int,java.nio.FloatBuffer) -> a
+    void glGetProgramiv(int,int,java.nio.IntBuffer) -> a
+    void glShaderSource(int,java.lang.String) -> a
+    void glTexImage2D(int,int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glTexParameterf(int,int,float) -> a
+    void glUniformMatrix4fv(int,int,boolean,float[],int) -> a
+    void glVertexAttribPointer(int,int,int,boolean,int,int) -> a
+    void glVertexAttribPointer(int,int,int,boolean,int,java.nio.Buffer) -> a
+    void glAttachShader(int,int) -> b
+    void glBlendFuncSeparate(int,int,int,int) -> b
+    int glCheckFramebufferStatus(int) -> b
+    void glDrawElements(int,int,int,java.nio.Buffer) -> b
+    void glFramebufferTexture2D(int,int,int,int,int) -> b
+    int glGenRenderbuffer() -> b
+    java.lang.String glGetActiveAttrib(int,int,java.nio.IntBuffer,java.nio.IntBuffer) -> b
+    void glGetShaderiv(int,int,java.nio.IntBuffer) -> b
+    int glGetUniformLocation(int,java.lang.String) -> b
+    void glTexParameteri(int,int,int) -> b
+    void glBindRenderbuffer(int,int) -> c
+    void glDrawElements(int,int,int,int) -> c
+    int glGenTexture() -> c
+    int glGetAttribLocation(int,java.lang.String) -> c
+    void glUseProgram(int) -> c
+    int glCreateProgram() -> d
+    void glFramebufferRenderbuffer(int,int,int,int) -> d
+    void glGenerateMipmap(int) -> d
+    void glGetIntegerv(int,java.nio.IntBuffer) -> d
+    void glUniform1i(int,int) -> d
+    void glBindBuffer(int,int) -> e
+    int glGenFramebuffer() -> e
+    void glLinkProgram(int) -> e
+    void glRenderbufferStorage(int,int,int,int) -> e
+    void glDeleteRenderbuffer(int) -> f
+    void glPixelStorei(int,int) -> f
+    void glBindTexture(int,int) -> g
+    java.lang.String glGetShaderInfoLog(int) -> g
+    java.lang.String glGetProgramInfoLog(int) -> h
+    void glEnableVertexAttribArray(int) -> i
+    java.lang.String glGetString(int) -> j
+    void glClear(int) -> k
+    void glDeleteFramebuffer(int) -> l
+    void glDisable(int) -> m
+    void glDisableVertexAttribArray(int) -> n
+    int glCreateShader(int) -> o
+    void glDeleteTexture(int) -> q
+    void glDeleteShader(int) -> r
+    void glDeleteProgram(int) -> s
+    void glCompileShader(int) -> t
+    void glDeleteBuffer(int) -> u
+com.badlogic.gdx.graphics.GL30 -> a.a.a.s.g:
+    void glDrawArraysInstanced(int,int,int,int) -> a
+    void glDrawBuffers(int,java.nio.IntBuffer) -> a
+    void glDrawElementsInstanced(int,int,int,int,int) -> a
+    void glTexImage3D(int,int,int,int,int,int,int,int,int,java.nio.Buffer) -> a
+    void glDeleteVertexArrays(int,java.nio.IntBuffer) -> b
+    void glGenVertexArrays(int,java.nio.IntBuffer) -> c
+    void glBindVertexArray(int) -> p
+com.badlogic.gdx.graphics.GLTexture -> a.a.a.s.h:
+    float maxAnisotropicFilterLevel -> h
+    float anisotropicFilterLevel -> g
+    int glHandle -> b
+    com.badlogic.gdx.graphics.Texture$TextureWrap vWrap -> f
+    com.badlogic.gdx.graphics.Texture$TextureWrap uWrap -> e
+    com.badlogic.gdx.graphics.Texture$TextureFilter magFilter -> d
+    int glTarget -> a
+    com.badlogic.gdx.graphics.Texture$TextureFilter minFilter -> c
+    void setFilter(com.badlogic.gdx.graphics.Texture$TextureFilter,com.badlogic.gdx.graphics.Texture$TextureFilter) -> a
+    void setWrap(com.badlogic.gdx.graphics.Texture$TextureWrap,com.badlogic.gdx.graphics.Texture$TextureWrap) -> a
+    float unsafeSetAnisotropicFilter(float,boolean) -> a
+    void unsafeSetFilter(com.badlogic.gdx.graphics.Texture$TextureFilter,com.badlogic.gdx.graphics.Texture$TextureFilter,boolean) -> a
+    void unsafeSetWrap(com.badlogic.gdx.graphics.Texture$TextureWrap,com.badlogic.gdx.graphics.Texture$TextureWrap,boolean) -> a
+    void uploadImageData(int,com.badlogic.gdx.graphics.TextureData) -> a
+    void uploadImageData(int,com.badlogic.gdx.graphics.TextureData,int) -> a
+    void bind() -> i
+    void delete() -> l
+    int getTextureObjectHandle() -> m
+    float getMaxAnisotropicFilterLevel() -> n
+com.badlogic.gdx.graphics.Mesh -> a.a.a.s.i:
+    com.badlogic.gdx.graphics.glutils.VertexData vertices -> a
+    com.badlogic.gdx.graphics.glutils.IndexData indices -> b
+    com.badlogic.gdx.graphics.glutils.InstanceData instances -> e
+    boolean isInstanced -> f
+    java.util.Map meshes -> g
+    boolean autoBind -> c
+    boolean isVertexArray -> d
+    void addManagedMesh(com.badlogic.gdx.Application,com.badlogic.gdx.graphics.Mesh) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram) -> a
+    void clearAllMeshes(com.badlogic.gdx.Application) -> a
+    void dispose() -> a
+    void render(com.badlogic.gdx.graphics.glutils.ShaderProgram,int,int,int) -> a
+    void render(com.badlogic.gdx.graphics.glutils.ShaderProgram,int,int,int,boolean) -> a
+    com.badlogic.gdx.graphics.Mesh setIndices(short[]) -> a
+    com.badlogic.gdx.graphics.Mesh setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidateAllMeshes(com.badlogic.gdx.Application) -> b
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram) -> b
+    java.nio.ShortBuffer getIndicesBuffer() -> l
+    java.lang.String getManagedStatus() -> m
+com.badlogic.gdx.graphics.Mesh$1 -> a.a.a.s.i$a:
+    int[] $SwitchMap$com$badlogic$gdx$graphics$Mesh$VertexDataType -> a
+com.badlogic.gdx.graphics.Mesh$VertexDataType -> a.a.a.s.i$b:
+    com.badlogic.gdx.graphics.Mesh$VertexDataType VertexBufferObject -> b
+    com.badlogic.gdx.graphics.Mesh$VertexDataType VertexBufferObjectSubData -> c
+    com.badlogic.gdx.graphics.Mesh$VertexDataType VertexArray -> a
+    com.badlogic.gdx.graphics.Mesh$VertexDataType VertexBufferObjectWithVAO -> d
+    com.badlogic.gdx.graphics.Mesh$VertexDataType[] $VALUES -> e
+com.badlogic.gdx.graphics.OrthographicCamera -> a.a.a.s.j:
+    com.badlogic.gdx.math.Vector3 tmp -> n
+    float zoom -> m
+    void setToOrtho(boolean,float,float) -> a
+    void update() -> a
+    void update(boolean) -> a
+com.badlogic.gdx.graphics.Pixmap -> a.a.a.s.k:
+    com.badlogic.gdx.graphics.g2d.Gdx2DPixmap pixmap -> a
+    int color -> b
+    boolean disposed -> c
+    void dispose() -> a
+    void drawPixmap(com.badlogic.gdx.graphics.Pixmap,int,int,int,int,int,int) -> a
+    void drawPixmap(com.badlogic.gdx.graphics.Pixmap,int,int,int,int,int,int,int,int) -> a
+    void setBlending(com.badlogic.gdx.graphics.Pixmap$Blending) -> a
+    void setColor(float,float,float,float) -> a
+    void fill() -> l
+    com.badlogic.gdx.graphics.Pixmap$Format getFormat() -> m
+    int getGLFormat() -> n
+    int getGLInternalFormat() -> o
+    int getGLType() -> p
+    int getHeight() -> q
+    java.nio.ByteBuffer getPixels() -> r
+    int getWidth() -> s
+com.badlogic.gdx.graphics.Pixmap$Blending -> a.a.a.s.k$a:
+    com.badlogic.gdx.graphics.Pixmap$Blending[] $VALUES -> c
+    com.badlogic.gdx.graphics.Pixmap$Blending None -> a
+    com.badlogic.gdx.graphics.Pixmap$Blending SourceOver -> b
+com.badlogic.gdx.graphics.Pixmap$Filter -> a.a.a.s.k$b:
+    com.badlogic.gdx.graphics.Pixmap$Filter[] $VALUES -> c
+    com.badlogic.gdx.graphics.Pixmap$Filter NearestNeighbour -> a
+    com.badlogic.gdx.graphics.Pixmap$Filter BiLinear -> b
+com.badlogic.gdx.graphics.Pixmap$Format -> a.a.a.s.k$c:
+    com.badlogic.gdx.graphics.Pixmap$Format Alpha -> a
+    com.badlogic.gdx.graphics.Pixmap$Format Intensity -> b
+    com.badlogic.gdx.graphics.Pixmap$Format LuminanceAlpha -> c
+    com.badlogic.gdx.graphics.Pixmap$Format RGB565 -> d
+    com.badlogic.gdx.graphics.Pixmap$Format RGBA4444 -> e
+    com.badlogic.gdx.graphics.Pixmap$Format RGB888 -> f
+    com.badlogic.gdx.graphics.Pixmap$Format RGBA8888 -> g
+    com.badlogic.gdx.graphics.Pixmap$Format[] $VALUES -> h
+    com.badlogic.gdx.graphics.Pixmap$Format fromGdx2DPixmapFormat(int) -> a
+    int toGdx2DPixmapFormat(com.badlogic.gdx.graphics.Pixmap$Format) -> a
+com.badlogic.gdx.graphics.PixmapIO -> a.a.a.s.l:
+    com.badlogic.gdx.graphics.Pixmap readCIM(com.badlogic.gdx.files.FileHandle) -> a
+com.badlogic.gdx.graphics.PixmapIO$CIM -> a.a.a.s.l$a:
+    byte[] readBuffer -> a
+    com.badlogic.gdx.graphics.Pixmap read(com.badlogic.gdx.files.FileHandle) -> a
+com.badlogic.gdx.graphics.Texture -> a.a.a.s.m:
+    java.util.Map managedTextures -> k
+    com.badlogic.gdx.assets.AssetManager assetManager -> j
+    com.badlogic.gdx.graphics.TextureData data -> i
+    void addManagedTexture(com.badlogic.gdx.Application,com.badlogic.gdx.graphics.Texture) -> a
+    void clearAllTextures(com.badlogic.gdx.Application) -> a
+    void dispose() -> a
+    void load(com.badlogic.gdx.graphics.TextureData) -> a
+    void invalidateAllTextures(com.badlogic.gdx.Application) -> b
+    int getHeight() -> o
+    int getWidth() -> p
+    boolean isManaged() -> q
+    void reload() -> r
+    java.lang.String getManagedStatus() -> s
+com.badlogic.gdx.graphics.Texture$TextureFilter -> a.a.a.s.m$a:
+    com.badlogic.gdx.graphics.Texture$TextureFilter Nearest -> b
+    com.badlogic.gdx.graphics.Texture$TextureFilter MipMapLinearLinear -> h
+    com.badlogic.gdx.graphics.Texture$TextureFilter MipMapNearestLinear -> g
+    com.badlogic.gdx.graphics.Texture$TextureFilter MipMapLinearNearest -> f
+    com.badlogic.gdx.graphics.Texture$TextureFilter MipMapNearestNearest -> e
+    com.badlogic.gdx.graphics.Texture$TextureFilter MipMap -> d
+    com.badlogic.gdx.graphics.Texture$TextureFilter[] $VALUES -> i
+    com.badlogic.gdx.graphics.Texture$TextureFilter Linear -> c
+    int glEnum -> a
+    int getGLEnum() -> a
+com.badlogic.gdx.graphics.Texture$TextureWrap -> a.a.a.s.m$b:
+    com.badlogic.gdx.graphics.Texture$TextureWrap MirroredRepeat -> b
+    com.badlogic.gdx.graphics.Texture$TextureWrap Repeat -> d
+    com.badlogic.gdx.graphics.Texture$TextureWrap ClampToEdge -> c
+    com.badlogic.gdx.graphics.Texture$TextureWrap[] $VALUES -> e
+    int glEnum -> a
+    int getGLEnum() -> a
+com.badlogic.gdx.graphics.TextureArray -> a.a.a.s.n:
+    com.badlogic.gdx.graphics.TextureArrayData data -> i
+    java.util.Map managedTextureArrays -> j
+    void clearAllTextureArrays(com.badlogic.gdx.Application) -> a
+    void load(com.badlogic.gdx.graphics.TextureArrayData) -> a
+    void invalidateAllTextureArrays(com.badlogic.gdx.Application) -> b
+    boolean isManaged() -> o
+    void reload() -> p
+com.badlogic.gdx.graphics.TextureArrayData -> a.a.a.s.o:
+    int getDepth() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    int getInternalFormat() -> g
+    void consumeTextureArrayData() -> h
+    int getGLType() -> i
+com.badlogic.gdx.graphics.TextureData -> a.a.a.s.p:
+    void consumeCustomData(int) -> a
+    com.badlogic.gdx.graphics.TextureData$TextureDataType getType() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    boolean disposePixmap() -> g
+    com.badlogic.gdx.graphics.Pixmap consumePixmap() -> h
+    com.badlogic.gdx.graphics.Pixmap$Format getFormat() -> i
+    boolean useMipMaps() -> j
+com.badlogic.gdx.graphics.TextureData$Factory -> a.a.a.s.p$a:
+    com.badlogic.gdx.graphics.TextureData loadFromFile(com.badlogic.gdx.files.FileHandle,com.badlogic.gdx.graphics.Pixmap$Format,boolean) -> a
+com.badlogic.gdx.graphics.TextureData$TextureDataType -> a.a.a.s.p$b:
+    com.badlogic.gdx.graphics.TextureData$TextureDataType[] $VALUES -> c
+    com.badlogic.gdx.graphics.TextureData$TextureDataType Pixmap -> a
+    com.badlogic.gdx.graphics.TextureData$TextureDataType Custom -> b
+com.badlogic.gdx.graphics.VertexAttribute -> a.a.a.s.q:
+    java.lang.String alias -> f
+    int usageIndex -> h
+    int unit -> g
+    int type -> d
+    int offset -> e
+    int numComponents -> b
+    boolean normalized -> c
+    int usage -> a
+    boolean equals(com.badlogic.gdx.graphics.VertexAttribute) -> a
+    int getKey() -> a
+    int getSizeInBytes() -> b
+com.badlogic.gdx.graphics.VertexAttributes -> a.a.a.s.r:
+    com.badlogic.gdx.graphics.VertexAttributes$ReadonlyIterable iterable -> d
+    long mask -> c
+    int vertexSize -> b
+    com.badlogic.gdx.graphics.VertexAttribute[] attributes -> a
+    int compareTo(com.badlogic.gdx.graphics.VertexAttributes) -> a
+    com.badlogic.gdx.graphics.VertexAttribute get(int) -> a
+    long getMask() -> a
+    int size() -> b
+    int calculateOffsets() -> c
+com.badlogic.gdx.graphics.VertexAttributes$ReadonlyIterable -> a.a.a.s.r$a:
+    java.lang.Object[] array -> a
+    com.badlogic.gdx.graphics.VertexAttributes$ReadonlyIterator iterator2 -> c
+    com.badlogic.gdx.graphics.VertexAttributes$ReadonlyIterator iterator1 -> b
+com.badlogic.gdx.graphics.VertexAttributes$ReadonlyIterator -> a.a.a.s.r$b:
+    java.lang.Object[] array -> a
+    int index -> b
+    boolean valid -> c
+com.badlogic.gdx.graphics.g2d.Batch -> com.badlogic.gdx.graphics.g2d.a:
+    void draw(com.badlogic.gdx.graphics.Texture,float[],int,int) -> a
+com.badlogic.gdx.graphics.g2d.BitmapFont -> com.badlogic.gdx.graphics.g2d.b:
+    com.badlogic.gdx.graphics.g2d.BitmapFontCache cache -> c
+    com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData data -> a
+    com.badlogic.gdx.utils.Array regions -> b
+    boolean integer -> d
+    com.badlogic.gdx.graphics.g2d.GlyphLayout draw(com.badlogic.gdx.graphics.g2d.Batch,java.lang.CharSequence,float,float) -> a
+    void load(com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData) -> a
+    com.badlogic.gdx.utils.Array getRegions() -> l
+    com.badlogic.gdx.graphics.g2d.BitmapFontCache newFontCache() -> m
+com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData -> com.badlogic.gdx.graphics.g2d.b$a:
+    float descent -> l
+    float ascent -> k
+    float capHeight -> j
+    float lineHeight -> i
+    com.badlogic.gdx.files.FileHandle fontFile -> c
+    float padLeft -> h
+    float padBottom -> g
+    float padRight -> f
+    float padTop -> e
+    com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph[][] glyphs -> r
+    boolean markupEnabled -> q
+    java.lang.String[] imagePaths -> b
+    char[] breakChars -> u
+    char[] xChars -> v
+    char[] capChars -> w
+    com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph missingGlyph -> s
+    float spaceXadvance -> t
+    java.lang.String name -> a
+    float scaleY -> p
+    float scaleX -> o
+    float blankLineScale -> n
+    boolean flipped -> d
+    float down -> m
+    com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph getFirstGlyph() -> a
+    com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph getGlyph(char) -> a
+    void getGlyphs(com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun,java.lang.CharSequence,int,int,com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph) -> a
+    int getWrapIndex(com.badlogic.gdx.utils.Array,int) -> a
+    void load(com.badlogic.gdx.files.FileHandle,boolean) -> a
+    void setGlyph(int,com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph) -> a
+    void setGlyphRegion(com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph,com.badlogic.gdx.graphics.g2d.TextureRegion) -> a
+    boolean isBreakChar(char) -> b
+    boolean isWhitespace(char) -> c
+com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph -> com.badlogic.gdx.graphics.g2d.b$b:
+    boolean fixedWidth -> n
+    int page -> o
+    int xadvance -> l
+    float v2 -> i
+    float u2 -> h
+    int xoffset -> j
+    float v -> g
+    int yoffset -> k
+    float u -> f
+    int width -> d
+    int height -> e
+    int srcX -> b
+    int srcY -> c
+    byte[][] kerning -> m
+    int id -> a
+    int getKerning(char) -> a
+    void setKerning(int,int) -> a
+com.badlogic.gdx.graphics.g2d.BitmapFontCache -> com.badlogic.gdx.graphics.g2d.c:
+    int[] idx -> h
+    com.badlogic.gdx.graphics.Color color -> f
+    float[][] pageVertices -> g
+    com.badlogic.gdx.utils.IntArray[] pageGlyphIndices -> i
+    com.badlogic.gdx.utils.Array pooledLayouts -> d
+    com.badlogic.gdx.utils.Array layouts -> c
+    int glyphCount -> e
+    com.badlogic.gdx.graphics.g2d.BitmapFont font -> a
+    int[] tempGlyphCount -> j
+    boolean integer -> b
+    void addGlyph(com.badlogic.gdx.graphics.g2d.BitmapFont$Glyph,float,float,float) -> a
+    com.badlogic.gdx.graphics.g2d.GlyphLayout addText(java.lang.CharSequence,float,float) -> a
+    com.badlogic.gdx.graphics.g2d.GlyphLayout addText(java.lang.CharSequence,float,float,int,int,float,int,boolean,java.lang.String) -> a
+    void addText(com.badlogic.gdx.graphics.g2d.GlyphLayout,float,float) -> a
+    void clear() -> a
+    void draw(com.badlogic.gdx.graphics.g2d.Batch) -> a
+    void requireGlyphs(com.badlogic.gdx.graphics.g2d.GlyphLayout) -> a
+    void requirePageGlyphs(int,int) -> a
+    void addToCache(com.badlogic.gdx.graphics.g2d.GlyphLayout,float,float) -> b
+com.badlogic.gdx.graphics.g2d.Gdx2DPixmap -> com.badlogic.gdx.graphics.g2d.Gdx2DPixmap:
+    long[] nativeData -> f
+    long basePtr -> a
+    java.nio.ByteBuffer pixelPtr -> e
+    int format -> d
+    int width -> b
+    int height -> c
+    void clear(int) -> a
+    void dispose() -> a
+    void drawPixmap(com.badlogic.gdx.graphics.g2d.Gdx2DPixmap,int,int,int,int,int,int) -> a
+    void drawPixmap(com.badlogic.gdx.graphics.g2d.Gdx2DPixmap,int,int,int,int,int,int,int,int) -> a
+    void setBlend(int) -> b
+    void convert(int) -> c
+    java.lang.String getFormatString(int) -> d
+    int toGlFormat(int) -> e
+    int toGlType(int) -> f
+    int getFormat() -> l
+    int getGLFormat() -> m
+    int getGLInternalFormat() -> n
+    int getGLType() -> o
+    int getHeight() -> p
+    java.nio.ByteBuffer getPixels() -> q
+    int getWidth() -> r
+com.badlogic.gdx.graphics.g2d.GlyphLayout -> com.badlogic.gdx.graphics.g2d.d:
+    com.badlogic.gdx.utils.Pool glyphRunPool -> d
+    com.badlogic.gdx.utils.Array runs -> a
+    float height -> c
+    float width -> b
+    com.badlogic.gdx.utils.Pool colorPool -> e
+    com.badlogic.gdx.utils.Array colorStack -> f
+    void adjustLastGlyph(com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData,com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun) -> a
+    int parseColorMarkup(java.lang.CharSequence,int,int,com.badlogic.gdx.utils.Pool) -> a
+    void reset() -> a
+    void setText(com.badlogic.gdx.graphics.g2d.BitmapFont,java.lang.CharSequence,int,int,com.badlogic.gdx.graphics.Color,float,int,boolean,java.lang.String) -> a
+    void truncate(com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData,com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun,float,java.lang.String,int,com.badlogic.gdx.utils.Pool) -> a
+    com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun wrap(com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData,com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun,int,int) -> a
+com.badlogic.gdx.graphics.g2d.GlyphLayout$GlyphRun -> com.badlogic.gdx.graphics.g2d.d$a:
+    com.badlogic.gdx.graphics.Color color -> f
+    com.badlogic.gdx.utils.Array glyphs -> a
+    float width -> e
+    float y -> d
+    float x -> c
+    com.badlogic.gdx.utils.FloatArray xAdvances -> b
+    void reset() -> a
+com.badlogic.gdx.graphics.g2d.SpriteBatch -> com.badlogic.gdx.graphics.g2d.e:
+    int blendSrcFuncAlpha -> l
+    int blendDstFuncAlpha -> m
+    boolean ownsShader -> p
+    boolean blendingDisabled -> i
+    int blendSrcFunc -> j
+    int blendDstFunc -> k
+    com.badlogic.gdx.graphics.Mesh$VertexDataType defaultVertexDataType -> u
+    com.badlogic.gdx.graphics.glutils.ShaderProgram shader -> n
+    com.badlogic.gdx.graphics.glutils.ShaderProgram customShader -> o
+    float[] vertices -> b
+    int idx -> c
+    com.badlogic.gdx.graphics.Mesh mesh -> a
+    com.badlogic.gdx.graphics.Texture lastTexture -> d
+    com.badlogic.gdx.math.Matrix4 projectionMatrix -> g
+    com.badlogic.gdx.math.Matrix4 combinedMatrix -> h
+    com.badlogic.gdx.math.Matrix4 transformMatrix -> f
+    boolean drawing -> e
+    int maxSpritesInBatch -> t
+    float colorPacked -> q
+    int renderCalls -> r
+    int totalRenderCalls -> s
+    void dispose() -> a
+    void draw(com.badlogic.gdx.graphics.Texture,float,float) -> a
+    void draw(com.badlogic.gdx.graphics.Texture,float,float,float,float) -> a
+    void draw(com.badlogic.gdx.graphics.Texture,float[],int,int) -> a
+    void setProjectionMatrix(com.badlogic.gdx.math.Matrix4) -> a
+    void switchTexture(com.badlogic.gdx.graphics.Texture) -> a
+    void begin() -> b
+    void end() -> c
+    void flush() -> d
+    boolean isBlendingEnabled() -> e
+    void setupMatrices() -> f
+    com.badlogic.gdx.graphics.glutils.ShaderProgram createDefaultShader() -> g
+com.badlogic.gdx.graphics.g2d.TextureAtlas$AtlasRegion -> com.badlogic.gdx.graphics.g2d.f:
+    java.lang.String name -> f
+    float offsetY -> h
+    int originalHeight -> j
+    float offsetX -> g
+    int packedHeight -> i
+com.badlogic.gdx.graphics.g2d.TextureRegion -> com.badlogic.gdx.graphics.g2d.g:
+    float v -> c
+    float u -> b
+    int regionWidth -> d
+    int regionHeight -> e
+    com.badlogic.gdx.graphics.Texture texture -> a
+    int getRegionHeight() -> a
+    void setRegion(float,float,float,float) -> a
+    void setRegion(int,int,int,int) -> a
+    int getRegionWidth() -> b
+    com.badlogic.gdx.graphics.Texture getTexture() -> c
+com.badlogic.gdx.graphics.glutils.ETC1 -> com.badlogic.gdx.graphics.glutils.ETC1:
+    int ETC1_RGB8_OES -> b
+    int PKM_HEADER_SIZE -> a
+    com.badlogic.gdx.graphics.Pixmap decodeImage(com.badlogic.gdx.graphics.glutils.ETC1$ETC1Data,com.badlogic.gdx.graphics.Pixmap$Format) -> a
+    int getPixelSize(com.badlogic.gdx.graphics.Pixmap$Format) -> a
+com.badlogic.gdx.graphics.glutils.ETC1$ETC1Data -> com.badlogic.gdx.graphics.glutils.ETC1$a:
+    int dataOffset -> d
+    java.nio.ByteBuffer compressedData -> c
+    int height -> b
+    int width -> a
+    void dispose() -> a
+    boolean hasPKMHeader() -> l
+    void checkNPOT() -> m
+com.badlogic.gdx.graphics.glutils.ETC1TextureData -> com.badlogic.gdx.graphics.glutils.a:
+    com.badlogic.gdx.files.FileHandle file -> a
+    boolean isPrepared -> f
+    int width -> d
+    com.badlogic.gdx.graphics.glutils.ETC1$ETC1Data data -> b
+    int height -> e
+    boolean useMipMaps -> c
+    void consumeCustomData(int) -> a
+    com.badlogic.gdx.graphics.TextureData$TextureDataType getType() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    boolean disposePixmap() -> g
+    com.badlogic.gdx.graphics.Pixmap consumePixmap() -> h
+    com.badlogic.gdx.graphics.Pixmap$Format getFormat() -> i
+    boolean useMipMaps() -> j
+com.badlogic.gdx.graphics.glutils.FileTextureData -> com.badlogic.gdx.graphics.glutils.b:
+    com.badlogic.gdx.graphics.Pixmap pixmap -> e
+    com.badlogic.gdx.files.FileHandle file -> a
+    com.badlogic.gdx.graphics.Pixmap$Format format -> d
+    boolean useMipMaps -> f
+    boolean isPrepared -> g
+    int width -> b
+    int height -> c
+    void consumeCustomData(int) -> a
+    com.badlogic.gdx.graphics.TextureData$TextureDataType getType() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    boolean disposePixmap() -> g
+    com.badlogic.gdx.graphics.Pixmap consumePixmap() -> h
+    com.badlogic.gdx.graphics.Pixmap$Format getFormat() -> i
+    boolean useMipMaps() -> j
+com.badlogic.gdx.graphics.glutils.GLFrameBuffer -> com.badlogic.gdx.graphics.glutils.c:
+    int defaultFramebufferHandle -> j
+    com.badlogic.gdx.utils.Array textureAttachments -> a
+    boolean defaultFramebufferHandleInitialized -> k
+    java.util.Map buffers -> i
+    boolean hasDepthStencilPackedBuffer -> f
+    int stencilbufferHandle -> d
+    boolean isMRT -> g
+    int depthStencilPackedBufferHandle -> e
+    int framebufferHandle -> b
+    int depthbufferHandle -> c
+    com.badlogic.gdx.graphics.glutils.GLFrameBuffer$GLFrameBufferBuilder bufferBuilder -> h
+    void addManagedFrameBuffer(com.badlogic.gdx.Application,com.badlogic.gdx.graphics.glutils.GLFrameBuffer) -> a
+    void attachFrameBufferColorTexture(com.badlogic.gdx.graphics.GLTexture) -> a
+    void clearAllFrameBuffers(com.badlogic.gdx.Application) -> a
+    com.badlogic.gdx.graphics.GLTexture createTexture(com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferTextureAttachmentSpec) -> a
+    java.lang.StringBuilder getManagedStatus(java.lang.StringBuilder) -> a
+    void disposeColorTexture(com.badlogic.gdx.graphics.GLTexture) -> b
+    void invalidateAllFrameBuffers(com.badlogic.gdx.Application) -> b
+    void build() -> l
+    void checkValidBuilder() -> m
+    java.lang.String getManagedStatus() -> n
+com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferRenderBufferAttachmentSpec -> com.badlogic.gdx.graphics.glutils.c$a:
+    int internalFormat -> a
+com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferTextureAttachmentSpec -> com.badlogic.gdx.graphics.glutils.c$b:
+    boolean isFloat -> a
+    boolean isDepth -> b
+    boolean isStencil -> c
+    boolean isColorTexture() -> a
+com.badlogic.gdx.graphics.glutils.GLFrameBuffer$GLFrameBufferBuilder -> com.badlogic.gdx.graphics.glutils.c$c:
+    com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferRenderBufferAttachmentSpec packedStencilDepthRenderBufferSpec -> f
+    com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferRenderBufferAttachmentSpec depthRenderBufferSpec -> e
+    com.badlogic.gdx.graphics.glutils.GLFrameBuffer$FrameBufferRenderBufferAttachmentSpec stencilRenderBufferSpec -> d
+    boolean hasPackedStencilDepthRenderBuffer -> i
+    com.badlogic.gdx.utils.Array textureAttachmentSpecs -> c
+    boolean hasStencilRenderBuffer -> g
+    boolean hasDepthRenderBuffer -> h
+    int height -> b
+    int width -> a
+com.badlogic.gdx.graphics.glutils.GLVersion -> com.badlogic.gdx.graphics.glutils.d:
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type type -> b
+    int majorVersion -> a
+    void extractVersion(java.lang.String,java.lang.String) -> a
+    int getMajorVersion() -> a
+    int parseInt(java.lang.String,int) -> a
+com.badlogic.gdx.graphics.glutils.GLVersion$Type -> com.badlogic.gdx.graphics.glutils.d$a:
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type WebGL -> c
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type GLES -> b
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type NONE -> d
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type OpenGL -> a
+    com.badlogic.gdx.graphics.glutils.GLVersion$Type[] $VALUES -> e
+com.badlogic.gdx.graphics.glutils.IndexArray -> com.badlogic.gdx.graphics.glutils.e:
+    java.nio.ShortBuffer buffer -> a
+    java.nio.ByteBuffer byteBuffer -> b
+    boolean empty -> c
+    void dispose() -> a
+    void setIndices(short[],int,int) -> a
+    void invalidate() -> b
+    java.nio.ShortBuffer getBuffer() -> e
+    void unbind() -> f
+    int getNumMaxIndices() -> h
+    void bind() -> i
+    int getNumIndices() -> j
+com.badlogic.gdx.graphics.glutils.IndexBufferObject -> com.badlogic.gdx.graphics.glutils.f:
+    boolean isDirty -> e
+    boolean isBound -> f
+    int usage -> g
+    java.nio.ShortBuffer buffer -> a
+    int bufferHandle -> d
+    boolean empty -> h
+    java.nio.ByteBuffer byteBuffer -> b
+    boolean ownsBuffer -> c
+    void dispose() -> a
+    void setIndices(short[],int,int) -> a
+    void invalidate() -> b
+    java.nio.ShortBuffer getBuffer() -> e
+    void unbind() -> f
+    int getNumMaxIndices() -> h
+    void bind() -> i
+    int getNumIndices() -> j
+com.badlogic.gdx.graphics.glutils.IndexBufferObjectSubData -> com.badlogic.gdx.graphics.glutils.g:
+    boolean isBound -> e
+    int usage -> f
+    java.nio.ShortBuffer buffer -> a
+    java.nio.ByteBuffer byteBuffer -> b
+    int bufferHandle -> c
+    boolean isDirty -> d
+    void dispose() -> a
+    void setIndices(short[],int,int) -> a
+    void invalidate() -> b
+    int createBufferObject() -> c
+    java.nio.ShortBuffer getBuffer() -> e
+    void unbind() -> f
+    int getNumMaxIndices() -> h
+    void bind() -> i
+    int getNumIndices() -> j
+com.badlogic.gdx.graphics.glutils.IndexData -> com.badlogic.gdx.graphics.glutils.h:
+    void dispose() -> a
+    void setIndices(short[],int,int) -> a
+    void invalidate() -> b
+    java.nio.ShortBuffer getBuffer() -> e
+    void unbind() -> f
+    int getNumMaxIndices() -> h
+    void bind() -> i
+    int getNumIndices() -> j
+com.badlogic.gdx.graphics.glutils.InstanceData -> com.badlogic.gdx.graphics.glutils.i:
+    void dispose() -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    int getNumInstances() -> k
+com.badlogic.gdx.graphics.glutils.KTXTextureData -> com.badlogic.gdx.graphics.glutils.j:
+    boolean useMipMaps -> m
+    com.badlogic.gdx.files.FileHandle file -> a
+    java.nio.ByteBuffer compressedData -> l
+    int numberOfMipmapLevels -> j
+    int imagePos -> k
+    int numberOfArrayElements -> h
+    int numberOfFaces -> i
+    int pixelHeight -> f
+    int pixelDepth -> g
+    int glInternalFormat -> d
+    int pixelWidth -> e
+    int glType -> b
+    int glFormat -> c
+    void consumeCustomData(int) -> a
+    com.badlogic.gdx.graphics.TextureData$TextureDataType getType() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    void prepare() -> d
+    boolean isManaged() -> e
+    boolean isPrepared() -> f
+    boolean disposePixmap() -> g
+    com.badlogic.gdx.graphics.Pixmap consumePixmap() -> h
+    com.badlogic.gdx.graphics.Pixmap$Format getFormat() -> i
+    boolean useMipMaps() -> j
+    void consumeCubemapData() -> k
+    void disposePreparedData() -> l
+com.badlogic.gdx.graphics.glutils.MipMapGenerator -> com.badlogic.gdx.graphics.glutils.k:
+    boolean useHWMipMap -> a
+    void generateMipMap(int,com.badlogic.gdx.graphics.Pixmap,int,int) -> a
+    void generateMipMapGLES20(int,com.badlogic.gdx.graphics.Pixmap) -> a
+    void generateMipMapCPU(int,com.badlogic.gdx.graphics.Pixmap,int,int) -> b
+    void generateMipMapDesktop(int,com.badlogic.gdx.graphics.Pixmap,int,int) -> c
+com.badlogic.gdx.graphics.glutils.ShaderProgram -> com.badlogic.gdx.graphics.glutils.l:
+    com.badlogic.gdx.utils.ObjectIntMap attributeSizes -> i
+    int vertexShaderHandle -> l
+    int fragmentShaderHandle -> m
+    boolean invalidated -> p
+    com.badlogic.gdx.utils.ObjectIntMap attributes -> g
+    java.nio.IntBuffer params -> q
+    com.badlogic.gdx.utils.ObjectIntMap attributeTypes -> h
+    int program -> k
+    com.badlogic.gdx.utils.ObjectIntMap uniformSizes -> e
+    java.lang.String fragmentShaderSource -> o
+    java.lang.String vertexShaderSource -> n
+    java.lang.String[] uniformNames -> f
+    java.nio.IntBuffer type -> r
+    boolean pedantic -> s
+    java.lang.String prependFragmentCode -> u
+    java.lang.String prependVertexCode -> t
+    com.badlogic.gdx.utils.ObjectMap shaders -> v
+    java.lang.String[] attributeNames -> j
+    com.badlogic.gdx.utils.ObjectIntMap uniforms -> c
+    com.badlogic.gdx.utils.ObjectIntMap uniformTypes -> d
+    java.lang.String log -> a
+    boolean isCompiled -> b
+    void addManagedShader(com.badlogic.gdx.Application,com.badlogic.gdx.graphics.glutils.ShaderProgram) -> a
+    void clearAllShaderPrograms(com.badlogic.gdx.Application) -> a
+    void compileShaders(java.lang.String,java.lang.String) -> a
+    void disableVertexAttribute(int) -> a
+    void disableVertexAttribute(java.lang.String) -> a
+    void dispose() -> a
+    int fetchUniformLocation(java.lang.String,boolean) -> a
+    int loadShader(int,java.lang.String) -> a
+    void setUniformMatrix(int,com.badlogic.gdx.math.Matrix4,boolean) -> a
+    void setUniformMatrix(java.lang.String,com.badlogic.gdx.math.Matrix4) -> a
+    void setUniformMatrix(java.lang.String,com.badlogic.gdx.math.Matrix4,boolean) -> a
+    void setUniformi(java.lang.String,int) -> a
+    void setVertexAttribute(int,int,int,boolean,int,int) -> a
+    void setVertexAttribute(int,int,int,boolean,int,java.nio.Buffer) -> a
+    void enableVertexAttribute(int) -> b
+    int getAttributeLocation(java.lang.String) -> b
+    void invalidateAllShaderPrograms(com.badlogic.gdx.Application) -> b
+    int fetchAttributeLocation(java.lang.String) -> c
+    int linkProgram(int) -> c
+    int fetchUniformLocation(java.lang.String) -> d
+    void bind() -> i
+    int createProgram() -> l
+    java.lang.String getLog() -> m
+    boolean isCompiled() -> n
+    void checkManaged() -> o
+    void fetchAttributes() -> p
+    void fetchUniforms() -> q
+    java.lang.String getManagedStatus() -> r
+com.badlogic.gdx.graphics.glutils.VertexArray -> com.badlogic.gdx.graphics.glutils.m:
+    java.nio.FloatBuffer buffer -> b
+    java.nio.ByteBuffer byteBuffer -> c
+    com.badlogic.gdx.graphics.VertexAttributes attributes -> a
+    void dispose() -> a
+    void setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidate() -> b
+com.badlogic.gdx.graphics.glutils.VertexBufferObject -> com.badlogic.gdx.graphics.glutils.n:
+    java.nio.FloatBuffer buffer -> b
+    int usage -> f
+    boolean isDirty -> g
+    java.nio.ByteBuffer byteBuffer -> c
+    int bufferHandle -> e
+    boolean isBound -> h
+    com.badlogic.gdx.graphics.VertexAttributes attributes -> a
+    boolean ownsBuffer -> d
+    void dispose() -> a
+    void setBuffer(java.nio.Buffer,boolean,com.badlogic.gdx.graphics.VertexAttributes) -> a
+    void setUsage(int) -> a
+    void setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidate() -> b
+    void bufferChanged() -> c
+com.badlogic.gdx.graphics.glutils.VertexBufferObjectSubData -> com.badlogic.gdx.graphics.glutils.o:
+    java.nio.FloatBuffer buffer -> b
+    boolean isDirect -> e
+    int usage -> f
+    int bufferHandle -> d
+    boolean isDirty -> g
+    java.nio.ByteBuffer byteBuffer -> c
+    boolean isBound -> h
+    com.badlogic.gdx.graphics.VertexAttributes attributes -> a
+    void dispose() -> a
+    void setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidate() -> b
+    void bufferChanged() -> c
+    int createBufferObject() -> d
+com.badlogic.gdx.graphics.glutils.VertexBufferObjectWithVAO -> com.badlogic.gdx.graphics.glutils.p:
+    java.nio.FloatBuffer buffer -> b
+    java.nio.IntBuffer tmpHandle -> k
+    int vaoHandle -> i
+    int usage -> f
+    boolean isDirty -> g
+    java.nio.ByteBuffer byteBuffer -> c
+    int bufferHandle -> e
+    boolean isBound -> h
+    com.badlogic.gdx.graphics.VertexAttributes attributes -> a
+    com.badlogic.gdx.utils.IntArray cachedLocations -> j
+    boolean ownsBuffer -> d
+    void bindData(com.badlogic.gdx.graphics.GL20) -> a
+    void dispose() -> a
+    void setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void unbindAttributes(com.badlogic.gdx.graphics.glutils.ShaderProgram) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidate() -> b
+    void bindAttributes(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> c
+    void bufferChanged() -> c
+    void createVAO() -> d
+    void deleteVAO() -> e
+com.badlogic.gdx.graphics.glutils.VertexData -> com.badlogic.gdx.graphics.glutils.q:
+    void dispose() -> a
+    void setVertices(float[],int,int) -> a
+    void unbind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> a
+    void bind(com.badlogic.gdx.graphics.glutils.ShaderProgram,int[]) -> b
+    void invalidate() -> b
+com.badlogic.gdx.math.Frustum -> com.badlogic.gdx.math.a:
+    com.badlogic.gdx.math.Vector3[] planePoints -> b
+    com.badlogic.gdx.math.Vector3[] clipSpacePlanePoints -> d
+    float[] clipSpacePlanePointsArray -> e
+    float[] planePointsArray -> c
+    com.badlogic.gdx.math.Plane[] planes -> a
+    void update(com.badlogic.gdx.math.Matrix4) -> a
+com.badlogic.gdx.math.MathUtils -> com.badlogic.gdx.math.b:
+    java.util.Random random -> a
+    boolean isEqual(float,float,float) -> a
+    boolean isPowerOfTwo(int) -> a
+    int random(int,int) -> a
+    int nextPowerOfTwo(int) -> b
+com.badlogic.gdx.math.Matrix4 -> com.badlogic.gdx.math.Matrix4:
+    com.badlogic.gdx.math.Vector3 l_vey -> d
+    com.badlogic.gdx.math.Vector3 tmpVec -> e
+    com.badlogic.gdx.math.Vector3 l_vez -> b
+    com.badlogic.gdx.math.Vector3 l_vex -> c
+    com.badlogic.gdx.math.Matrix4 tmpMat -> f
+    float[] val -> a
+    com.badlogic.gdx.math.Matrix4 idt() -> a
+    com.badlogic.gdx.math.Matrix4 mul(com.badlogic.gdx.math.Matrix4) -> a
+    void mul(float[],float[]) -> a
+    com.badlogic.gdx.math.Matrix4 set(float[]) -> a
+    com.badlogic.gdx.math.Matrix4 setToLookAt(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3) -> a
+    com.badlogic.gdx.math.Matrix4 setToLookAt(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3) -> a
+    com.badlogic.gdx.math.Matrix4 setToOrtho(float,float,float,float,float,float) -> a
+    com.badlogic.gdx.math.Matrix4 setToOrtho2D(float,float,float,float) -> a
+    com.badlogic.gdx.math.Matrix4 setToTranslation(float,float,float) -> a
+    float det(float[]) -> b
+    com.badlogic.gdx.math.Matrix4 set(com.badlogic.gdx.math.Matrix4) -> b
+    boolean inv(float[]) -> c
+com.badlogic.gdx.math.Plane -> com.badlogic.gdx.math.c:
+    com.badlogic.gdx.math.Vector3 normal -> a
+    float d -> b
+    void set(com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3,com.badlogic.gdx.math.Vector3) -> a
+com.badlogic.gdx.math.Quaternion -> com.badlogic.gdx.math.d:
+    float w -> d
+    float z -> c
+    float y -> b
+    float x -> a
+    com.badlogic.gdx.math.Quaternion idt() -> a
+    com.badlogic.gdx.math.Quaternion set(float,float,float,float) -> a
+com.badlogic.gdx.math.RandomXS128 -> com.badlogic.gdx.math.e:
+    long seed1 -> b
+    long seed0 -> a
+    long nextLong(long) -> a
+    void setState(long,long) -> a
+    long murmurHash3(long) -> b
+com.badlogic.gdx.math.Rectangle -> com.badlogic.gdx.math.f:
+    float height -> d
+    float width -> c
+    float y -> b
+    float x -> a
+    boolean overlaps(com.badlogic.gdx.math.Rectangle) -> a
+com.badlogic.gdx.math.Shape2D -> com.badlogic.gdx.math.g:
+com.badlogic.gdx.math.Vector -> com.badlogic.gdx.math.i:
+com.badlogic.gdx.math.Vector3 -> com.badlogic.gdx.math.h:
+    float z -> c
+    float y -> b
+    float x -> a
+    com.badlogic.gdx.math.Vector3 add(float,float,float) -> a
+    com.badlogic.gdx.math.Vector3 add(com.badlogic.gdx.math.Vector3) -> a
+    float len2() -> a
+    com.badlogic.gdx.math.Vector3 prj(com.badlogic.gdx.math.Matrix4) -> a
+    com.badlogic.gdx.math.Vector3 scl(float) -> a
+    com.badlogic.gdx.math.Vector3 crs(float,float,float) -> b
+    com.badlogic.gdx.math.Vector3 crs(com.badlogic.gdx.math.Vector3) -> b
+    com.badlogic.gdx.math.Vector3 nor() -> b
+    float dot(com.badlogic.gdx.math.Vector3) -> c
+    com.badlogic.gdx.math.Vector3 set(float,float,float) -> c
+    com.badlogic.gdx.math.Vector3 set(com.badlogic.gdx.math.Vector3) -> d
+    com.badlogic.gdx.math.Vector3 sub(float,float,float) -> d
+    com.badlogic.gdx.math.Vector3 sub(com.badlogic.gdx.math.Vector3) -> e
+com.badlogic.gdx.math.collision.Ray -> com.badlogic.gdx.math.j.a:
+    com.badlogic.gdx.math.Vector3 direction -> b
+    com.badlogic.gdx.math.Vector3 origin -> a
+com.badlogic.gdx.net.NetJavaImpl -> a.a.a.t.a:
+    java.util.concurrent.ThreadPoolExecutor executorService -> a
+com.badlogic.gdx.net.NetJavaImpl$1 -> a.a.a.t.a$a:
+    java.util.concurrent.atomic.AtomicInteger threadID -> a
+com.badlogic.gdx.utils.Array -> com.badlogic.gdx.utils.a:
+    com.badlogic.gdx.utils.Array$ArrayIterable iterable -> d
+    java.lang.Object[] items -> a
+    int size -> b
+    boolean ordered -> c
+    void add(java.lang.Object) -> a
+    void addAll(com.badlogic.gdx.utils.Array) -> a
+    void addAll(com.badlogic.gdx.utils.Array,int,int) -> a
+    void addAll(java.lang.Object[],int,int) -> a
+    void clear() -> a
+    java.lang.Object[] ensureCapacity(int) -> a
+    void removeRange(int,int) -> a
+    boolean removeValue(java.lang.Object,boolean) -> a
+    com.badlogic.gdx.utils.Array with(java.lang.Object[]) -> a
+    java.lang.Object first() -> b
+    java.lang.Object get(int) -> b
+    java.lang.Object peek() -> c
+    java.lang.Object removeIndex(int) -> c
+    java.lang.Object pop() -> d
+    java.lang.Object[] resize(int) -> d
+    void truncate(int) -> e
+com.badlogic.gdx.utils.Array$ArrayIterable -> com.badlogic.gdx.utils.a$a:
+    com.badlogic.gdx.utils.Array array -> a
+    com.badlogic.gdx.utils.Array$ArrayIterator iterator2 -> d
+    com.badlogic.gdx.utils.Array$ArrayIterator iterator1 -> c
+    boolean allowRemove -> b
+com.badlogic.gdx.utils.Array$ArrayIterator -> com.badlogic.gdx.utils.a$b:
+    com.badlogic.gdx.utils.Array array -> a
+    boolean allowRemove -> b
+    int index -> c
+    boolean valid -> d
+com.badlogic.gdx.utils.BufferUtils -> com.badlogic.gdx.utils.BufferUtils:
+    com.badlogic.gdx.utils.Array unsafeBuffers -> a
+    int allocatedUnsafe -> b
+    void copy(float[],java.nio.Buffer,int,int) -> a
+    void disposeUnsafeByteBuffer(java.nio.ByteBuffer) -> a
+    java.nio.ByteBuffer newByteBuffer(int) -> a
+    java.nio.FloatBuffer newFloatBuffer(int) -> b
+    java.nio.IntBuffer newIntBuffer(int) -> c
+    java.nio.ByteBuffer newUnsafeByteBuffer(int) -> d
+com.badlogic.gdx.utils.Clipboard -> com.badlogic.gdx.utils.b:
+com.badlogic.gdx.utils.Collections -> com.badlogic.gdx.utils.c:
+    boolean allocateIterators -> a
+com.badlogic.gdx.utils.Disposable -> com.badlogic.gdx.utils.d:
+    void dispose() -> a
+com.badlogic.gdx.utils.FloatArray -> com.badlogic.gdx.utils.e:
+    float[] items -> a
+    int size -> b
+    boolean ordered -> c
+    void add(float) -> a
+    void addAll(com.badlogic.gdx.utils.FloatArray) -> a
+    void addAll(com.badlogic.gdx.utils.FloatArray,int,int) -> a
+    void addAll(float[],int,int) -> a
+    void clear() -> a
+    float[] ensureCapacity(int) -> a
+    void removeRange(int,int) -> a
+    float get(int) -> b
+    float[] resize(int) -> c
+    void truncate(int) -> d
+com.badlogic.gdx.utils.GdxNativesLoader -> com.badlogic.gdx.utils.f:
+    boolean disableNativesLoading -> a
+    boolean nativesLoaded -> b
+    void load() -> a
+com.badlogic.gdx.utils.GdxRuntimeException -> com.badlogic.gdx.utils.g:
+com.badlogic.gdx.utils.IntArray -> com.badlogic.gdx.utils.h:
+    int[] items -> a
+    int size -> b
+    boolean ordered -> c
+    void add(int) -> a
+    void clear() -> a
+    void insert(int,int) -> a
+    int[] ensureCapacity(int) -> b
+    int pop() -> b
+    int get(int) -> c
+    int[] resize(int) -> d
+com.badlogic.gdx.utils.IntSet -> com.badlogic.gdx.utils.i:
+    int[] keyTable -> b
+    float loadFactor -> d
+    int shift -> f
+    int mask -> g
+    int threshold -> e
+    boolean hasZeroValue -> c
+    int size -> a
+    boolean add(int) -> a
+    boolean contains(int) -> b
+    int place(int) -> c
+    boolean remove(int) -> d
+    void addResize(int) -> e
+    int locateKey(int) -> f
+    void resize(int) -> g
+com.badlogic.gdx.utils.NumberUtils -> com.badlogic.gdx.utils.j:
+    int floatToIntBits(float) -> a
+    float intToFloatColor(int) -> a
+    int floatToRawIntBits(float) -> b
+com.badlogic.gdx.utils.ObjectIntMap -> com.badlogic.gdx.utils.k:
+    java.lang.Object[] keyTable -> b
+    int[] valueTable -> c
+    com.badlogic.gdx.utils.ObjectIntMap$Entries entries1 -> h
+    float loadFactor -> d
+    int shift -> f
+    com.badlogic.gdx.utils.ObjectIntMap$Entries entries2 -> i
+    int mask -> g
+    int threshold -> e
+    int size -> a
+    boolean containsKey(java.lang.Object) -> a
+    com.badlogic.gdx.utils.ObjectIntMap$Entries entries() -> a
+    int get(java.lang.Object,int) -> a
+    void resize(int) -> a
+    java.lang.String toString(java.lang.String,boolean) -> a
+    int locateKey(java.lang.Object) -> b
+    void put(java.lang.Object,int) -> b
+    int place(java.lang.Object) -> c
+    void putResize(java.lang.Object,int) -> c
+com.badlogic.gdx.utils.ObjectIntMap$Entries -> com.badlogic.gdx.utils.k$a:
+    com.badlogic.gdx.utils.ObjectIntMap$Entry entry -> f
+    void reset() -> b
+com.badlogic.gdx.utils.ObjectIntMap$Entry -> com.badlogic.gdx.utils.k$b:
+    java.lang.Object key -> a
+    int value -> b
+com.badlogic.gdx.utils.ObjectIntMap$MapIterator -> com.badlogic.gdx.utils.k$c:
+    boolean valid -> e
+    int currentIndex -> d
+    com.badlogic.gdx.utils.ObjectIntMap map -> b
+    boolean hasNext -> a
+    int nextIndex -> c
+    void findNextIndex() -> a
+    void reset() -> b
+com.badlogic.gdx.utils.ObjectMap -> com.badlogic.gdx.utils.l:
+    java.lang.Object[] keyTable -> b
+    java.lang.Object[] valueTable -> c
+    com.badlogic.gdx.utils.ObjectMap$Entries entries1 -> h
+    com.badlogic.gdx.utils.ObjectMap$Entries entries2 -> i
+    float loadFactor -> d
+    int shift -> f
+    int mask -> g
+    int threshold -> e
+    com.badlogic.gdx.utils.ObjectMap$Keys keys1 -> j
+    com.badlogic.gdx.utils.ObjectMap$Keys keys2 -> k
+    java.lang.Object dummy -> l
+    int size -> a
+    void clear() -> a
+    java.lang.Object get(java.lang.Object) -> a
+    java.lang.Object get(java.lang.Object,java.lang.Object) -> a
+    void resize(int) -> a
+    java.lang.String toString(java.lang.String,boolean) -> a
+    com.badlogic.gdx.utils.ObjectMap$Entries entries() -> b
+    int locateKey(java.lang.Object) -> b
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> b
+    com.badlogic.gdx.utils.ObjectMap$Keys keys() -> c
+    int place(java.lang.Object) -> c
+    void putResize(java.lang.Object,java.lang.Object) -> c
+    java.lang.Object remove(java.lang.Object) -> d
+com.badlogic.gdx.utils.ObjectMap$Entries -> com.badlogic.gdx.utils.l$a:
+    com.badlogic.gdx.utils.ObjectMap$Entry entry -> f
+    void reset() -> b
+com.badlogic.gdx.utils.ObjectMap$Entry -> com.badlogic.gdx.utils.l$b:
+    java.lang.Object value -> b
+    java.lang.Object key -> a
+com.badlogic.gdx.utils.ObjectMap$Keys -> com.badlogic.gdx.utils.l$c:
+    void reset() -> b
+com.badlogic.gdx.utils.ObjectMap$MapIterator -> com.badlogic.gdx.utils.l$d:
+    boolean valid -> e
+    int currentIndex -> d
+    boolean hasNext -> a
+    int nextIndex -> c
+    com.badlogic.gdx.utils.ObjectMap map -> b
+    void findNextIndex() -> a
+    void reset() -> b
+com.badlogic.gdx.utils.ObjectSet -> com.badlogic.gdx.utils.m:
+    int tableSize(int,float) -> a
+com.badlogic.gdx.utils.Pool -> com.badlogic.gdx.utils.n:
+    com.badlogic.gdx.utils.Array freeObjects -> c
+    int peak -> b
+    int max -> a
+    void discard(java.lang.Object) -> a
+    void freeAll(com.badlogic.gdx.utils.Array) -> a
+    java.lang.Object newObject() -> a
+    void free(java.lang.Object) -> b
+    java.lang.Object obtain() -> b
+    void reset(java.lang.Object) -> c
+com.badlogic.gdx.utils.Pool$Poolable -> com.badlogic.gdx.utils.n$a:
+    void reset() -> a
+com.badlogic.gdx.utils.Pools -> com.badlogic.gdx.utils.o:
+    com.badlogic.gdx.utils.ObjectMap typePools -> a
+    void freeAll(com.badlogic.gdx.utils.Array,boolean) -> a
+    com.badlogic.gdx.utils.Pool get(java.lang.Class) -> a
+    com.badlogic.gdx.utils.Pool get(java.lang.Class,int) -> a
+    java.lang.Object obtain(java.lang.Class) -> b
+com.badlogic.gdx.utils.ReflectionPool -> com.badlogic.gdx.utils.p:
+    com.badlogic.gdx.utils.reflect.Constructor constructor -> d
+    com.badlogic.gdx.utils.reflect.Constructor findConstructor(java.lang.Class) -> a
+    java.lang.Object newObject() -> a
+com.badlogic.gdx.utils.ScreenUtils -> com.badlogic.gdx.utils.q:
+    void clear(float,float,float,float) -> a
+    void clear(float,float,float,float,boolean) -> a
+com.badlogic.gdx.utils.SharedLibraryLoader -> com.badlogic.gdx.utils.r:
+    boolean isIos -> e
+    boolean isAndroid -> f
+    boolean isARM -> g
+    java.lang.String nativesJar -> a
+    boolean is64Bit -> h
+    boolean isWindows -> b
+    boolean isLinux -> c
+    boolean isMac -> d
+    java.util.HashSet loadedLibraries -> i
+    java.lang.String crc(java.io.InputStream) -> a
+    java.io.File extractFile(java.lang.String,java.lang.String,java.io.File) -> a
+    void load(java.lang.String) -> a
+    java.lang.Throwable loadFile(java.lang.String,java.lang.String,java.io.File) -> b
+    java.lang.String mapLibraryName(java.lang.String) -> b
+    boolean isLoaded(java.lang.String) -> c
+    void loadFile(java.lang.String) -> d
+    java.io.InputStream readFile(java.lang.String) -> e
+    void setLoaded(java.lang.String) -> f
+com.badlogic.gdx.utils.SnapshotArray -> com.badlogic.gdx.utils.s:
+    java.lang.Object[] snapshot -> e
+    int snapshots -> g
+    java.lang.Object[] recycled -> f
+    void clear() -> a
+    void removeRange(int,int) -> a
+    boolean removeValue(java.lang.Object,boolean) -> a
+    java.lang.Object removeIndex(int) -> c
+    java.lang.Object pop() -> d
+    java.lang.Object[] begin() -> e
+    void truncate(int) -> e
+    void end() -> f
+    void modified() -> g
+com.badlogic.gdx.utils.StreamUtils -> com.badlogic.gdx.utils.t:
+    void closeQuietly(java.io.Closeable) -> a
+    void copyStream(java.io.InputStream,java.io.OutputStream) -> a
+    void copyStream(java.io.InputStream,java.io.OutputStream,byte[]) -> a
+    byte[] copyStreamToByteArray(java.io.InputStream,int) -> a
+com.badlogic.gdx.utils.StreamUtils$OptimizedByteArrayOutputStream -> com.badlogic.gdx.utils.t$a:
+com.badlogic.gdx.utils.StringBuilder -> com.badlogic.gdx.utils.u:
+    char[] chars -> a
+    char[] digits -> c
+    int length -> b
+    com.badlogic.gdx.utils.StringBuilder append(float) -> a
+    com.badlogic.gdx.utils.StringBuilder append(int) -> a
+    com.badlogic.gdx.utils.StringBuilder append(int,int) -> a
+    com.badlogic.gdx.utils.StringBuilder append(int,int,char) -> a
+    com.badlogic.gdx.utils.StringBuilder append(java.lang.Object) -> a
+    com.badlogic.gdx.utils.StringBuilder append(java.lang.String) -> a
+    void append0(char) -> a
+    void append0(java.lang.CharSequence,int,int) -> a
+    void append0(char[],int,int) -> a
+    void appendNull() -> a
+    void append0(java.lang.String) -> b
+    void enlargeBuffer(int) -> b
+    java.lang.String substring(int,int) -> b
+    int numChars(int,int) -> c
+com.badlogic.gdx.utils.TimeUtils -> com.badlogic.gdx.utils.v:
+    long nanoTime() -> a
+com.badlogic.gdx.utils.reflect.ArrayReflection -> com.badlogic.gdx.utils.w.a:
+    java.lang.Object newInstance(java.lang.Class,int) -> a
+com.badlogic.gdx.utils.reflect.ClassReflection -> com.badlogic.gdx.utils.w.b:
+    com.badlogic.gdx.utils.reflect.Constructor getConstructor(java.lang.Class,java.lang.Class[]) -> a
+    com.badlogic.gdx.utils.reflect.Constructor getDeclaredConstructor(java.lang.Class,java.lang.Class[]) -> b
+com.badlogic.gdx.utils.reflect.Constructor -> com.badlogic.gdx.utils.w.c:
+    java.lang.reflect.Constructor constructor -> a
+    java.lang.Class getDeclaringClass() -> a
+    java.lang.Object newInstance(java.lang.Object[]) -> a
+    void setAccessible(boolean) -> a
+com.badlogic.gdx.utils.reflect.ReflectionException -> com.badlogic.gdx.utils.w.d:
+com.fouragainstdarkness.game.FourAgainstDarkness -> com.fouragainstdarkness.game.a:
+    com.badlogic.gdx.audio.Sound dropSound -> d
+    int pontos -> l
+    long lastDropTime -> k
+    com.badlogic.gdx.graphics.g2d.BitmapFont font -> m
+    com.badlogic.gdx.audio.Music rainMusic -> e
+    com.badlogic.gdx.graphics.Texture buttonImage -> c
+    com.badlogic.gdx.graphics.Texture bucketImage -> b
+    com.badlogic.gdx.graphics.Texture dropImage -> a
+    com.badlogic.gdx.graphics.g2d.SpriteBatch batch -> f
+    com.badlogic.gdx.math.Rectangle bucket -> h
+    com.badlogic.gdx.utils.Array raindrops -> j
+    com.badlogic.gdx.graphics.OrthographicCamera camera -> g
+    com.badlogic.gdx.math.Rectangle button -> i
+    void dispose() -> a
+    void tick() -> b
+    void create() -> e
+    void render() -> f
+    void spawnRaindrop() -> g
