@@ -1,0 +1,6 @@
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\GeneticAlgorithm.csproj.AssemblyReference.cache
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\SimulatedAnnealing.Form1.resources
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\GeneticAlgorithm.csproj.GenerateResource.cache
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\GeneticAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\SimulatedAnnealing.exe
+C:\Users\Vitor\Documents\Vitor\IPRJ-UERJ (Engenharia da Computação)\9º Período - 2022.1\Tópicos Especiais em Otimização (Eletiva)\Trabalho 4\GeneticAlgorithm\GeneticAlgorithm\obj\Debug\SimulatedAnnealing.pdb

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32611.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedAnnealing", "SimulatedAnnealing.csproj", "{AAE8105A-C40A-47F2-B30E-323BE73A11EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAE8105A-C40A-47F2-B30E-323BE73A11EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE8105A-C40A-47F2-B30E-323BE73A11EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE8105A-C40A-47F2-B30E-323BE73A11EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE8105A-C40A-47F2-B30E-323BE73A11EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1551301F-5DF8-4F8C-BB11-E305A80FF61A}
+	EndGlobalSection
+EndGlobal

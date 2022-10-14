@@ -1,0 +1,7 @@
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\bin\Debug\CShp_FuncLocal.exe.config
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\bin\Debug\CShp_FuncLocal.exe
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\bin\Debug\CShp_FuncLocal.pdb
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\obj\Debug\CShp_FuncLocal.csprojAssemblyReference.cache
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\obj\Debug\CShp_FuncLocal.csproj.CoreCompileInputs.cache
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\obj\Debug\CShp_FuncLocal.exe
+c:\cshp_setembro_2018\CShp_FuncLocal\CShp_FuncLocal\obj\Debug\CShp_FuncLocal.pdb

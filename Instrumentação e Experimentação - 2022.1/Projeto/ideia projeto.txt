@@ -1,0 +1,2 @@
+Panela de pressão elétrica com monitoramento de temperatura e nível
+um sensor de pressão também pode ser utilizado

@@ -1,0 +1,120 @@
+class common
+{
+    static int length = 2;
+
+    static double[] dejongarr1 = { -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32, -32, -16, 0, 16, 32 };
+    static double[] dejongarr2 = { -32, -32, -32, -32, -32, -16, -16, -16, -16, -16, 0, 0, 0, 0, 0, 16, 16, 16, 16, 16, 32, 32, 32, 32, 32 };
+
+
+    public static double dejong5(Individuo ind)
+    {
+        double ret = 0.002;
+        for (int i = 0; i < 25; i++)
+        {
+            ret += 1 / (i + Math.Pow((ind.vet[0] - dejongarr1[i]), 6) + Math.Pow((ind.vet[1] - dejongarr2[i]), 6));
+        }
+        return 1 / ret;
+    }
+
+    public static double griekwank(Individuo ind)
+    { //Minimo global = 0 em (0, …, 0)
+        double sum = 0;
+        double prod = 1;
+        for (int i = 0; i < length; i++) sum += Math.Pow(ind.vet[0], 2);
+        for (int i = 0; i < length; i++) prod *= Math.Cos(ind.vet[1] / (Math.Sqrt(i + 1)));
+        return 1 + sum / 4000 - prod;
+    }
+
+    public static double easom(Individuo ind)
+    { //Minimo global = (PI, PI)
+        return -Math.Cos(ind.vet[0]) * Math.Cos(ind.vet[1]) * Math.Exp(-Math.Pow((ind.vet[0] - Math.PI), 2) - Math.Pow((ind.vet[1] - Math.PI), 2));
+    }
+
+    public static double randval()
+    {
+        System.Random random = new System.Random();
+        return random.NextDouble() * (50.0 - (-50.0)) + (-50.0);
+    }
+
+}
+class Individuo
+{ //Somente individuos 2D
+    public double[] pos = new double[2];
+    public double[] vel = new double[2];
+    public double fitness;
+
+    public double[] bestpos = new double[2];
+    public double bestfitness;
+
+    void fitnesscalc()
+    {
+        fitness = common.easom(this);
+        //fitness = griekwank(this);
+        //fitness = dejong5(this);
+    }
+
+    public void step()
+    { //Andar com o indivíduo também atualiza seu fitness apropriadamente
+        for (int i = 0; i < 2; i++) pos[i] += vel[i];
+        fitnesscalc();
+        if (fitness < bestfitness)
+        {
+            for (int i = 0; i < 2; i++) bestpos[i] = pos[i];
+        }
+    }
+
+    public void Invididuo()
+    { //Inicialize posição e velocidade aleatória e preencha seu fitness inicial
+        for (int i = 0; i < 2; i++)
+        {
+            pos[i] = common.randval();
+            vel[i] = common.randval();
+        }
+        fitnesscalc();
+        bestpos = pos;
+        bestfitness = fitness;
+    }
+}
+
+class PSO
+{
+    static int popsize = 100;
+    static Individuo[] pop = new Individuo[PSO.popsize];
+
+    static double min = -50.0;
+    static double max = 50.0;
+    static double maxiter = 1000;
+
+    static double cognit = 0.5;
+    static double social = 0.5;
+
+    static double[] bestpos = new double[2];
+    static double bestfitness = 1.0 / 0;
+
+    public static void Main()
+    {
+        for (int i = 0; i < maxiter; i++)
+        { //Iteração
+
+            for (int j = 0; j < popsize; j++)
+            { //Checar qual o melhor fitness da população
+                if (pop[j].fitness < bestfitness)
+                { //No caso queremos minimizar o fitness
+                    bestfitness = pop[j].fitness;
+                    for (int k = 0; k < 2; k++) bestpos[k] = pop[j].pos[k];
+                }
+            }
+
+            for (int j = 0; j < popsize; j++)
+            { //Para cada indivíduo
+                for (int k = 0; k < 2; k++)
+                { //Atualize cada componente da velocidade
+                    pop[j].vel[k] += cognit * (pop[j].bestpos[k] - pop[j].pos[k]) + social * (bestpos[k] - pop[j].pos[k]); //Teria que mudar se fosse usar inércia
+                    if (pop[j].vel[k] < min) pop[j].vel[k] = min; // Truncar mínimo
+                    else if (pop[j].vel[k] > max) pop[j].vel[k] = max; // Truncar máximo
+                }
+                pop[j].step(); //Peça para o indivíduo andar
+            }
+        }
+    }
+}

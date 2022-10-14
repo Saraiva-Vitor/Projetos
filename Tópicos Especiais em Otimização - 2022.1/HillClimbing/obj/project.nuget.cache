@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "EbfBmIAboOCTzK5BZAXwOyZo4CRuCmEckISYPkj56bGXI7lGnuCc9h7ImykVvtIqDUYArfyoM6hgjxSJXjKmQQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vitor\\Documents\\Vitor\\IPRJ-UERJ (Engenharia da Computação)\\9º Período - 2022.1\\Tópicos Especiais em Otimização (Eletiva)\\HillClimbing\\HillClimbing.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://packagesource'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

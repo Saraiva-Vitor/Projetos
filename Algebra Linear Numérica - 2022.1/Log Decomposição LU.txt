@@ -1,0 +1,6 @@
+Foi utilizado como base o código enviado anteriormente e nesse código se utilizava a biblioteca "time.h" para a 
+contagem do tempo de execução. Foi alterada a contagem para a biblioteca "chrono" e mudada o tipo de entrada da
+matriz para uma 10x10 gerada aleatóriamente junto com um vetor de 10 valores também gerados aleatóriamente para
+serem as soluções das equações a serem resolvidas. Foi encontrada dificuldade em mantem o tempo de execução baixo
+mas foi conseguido um tempo médio de 4 à 5 microsegundos. Foram feitas funções para multiplicação de Matriz x Matriz
+e Matriz x Vetor.
