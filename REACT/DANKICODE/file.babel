@@ -1,0 +1,31 @@
+var container = document.getElementById('main');
+
+class Box extends React.Component{
+
+    /*getNome(){
+        return 'Saraiva'
+    }
+
+    printNome(){
+        return <p>{this.getNome()}</p>;
+    }*/
+    render(){
+        return <h2>{this.props.children} {this.props.nome} {this.props.sobrenome}</h2>
+        //return <h1>{this.printNome()}</h1>
+    }
+}
+
+class Formulario extends React.Component{
+    renderMyApp(){
+        return (<div><input type="text"/><input onClick={this.handleClick} type="submit"/></div>)
+    }
+    handleClick(){
+        $('body').append('<div class="box" style="width:500px;height:500px;background:red;"></div>');
+        alert("Clicado!");
+    }
+    render(){
+        return this.renderMyApp();
+    }
+}
+
+ReactDOM.render(<div class="principal-react"><Box nome="Olá">Algum texto</Box><Box nome="Vitor" sobrenome="Saraiva"/><Box nome="Saraiva"/><Formulario/></div>,container);

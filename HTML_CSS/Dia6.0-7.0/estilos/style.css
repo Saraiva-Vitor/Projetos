@@ -1,0 +1,142 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    width: 100vw;
+    height: 10vh;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    background-color:  cyan;
+}
+
+#destino{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#destino h2{
+    color: white;
+    text-align: center;
+}
+
+#destino h3{
+    color: black;
+    text-align: left;
+}
+
+.container{
+    margin-top: 25%;
+    width: 100vw;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.form{
+    margin-top: 25%;
+    width: 80vw;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.card{
+    border-radius: 10px;
+    width: 30vw;
+    height: 30vh;
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: cornflowerblue;
+}
+
+.card-button{
+    cursor: pointer;
+    width: 90.5vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color:  black;
+}
+
+.card-content{
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.button{
+    cursor: pointer;
+    width: 90.5vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color:  cyan;
+}
+
+.input{
+    cursor: pointer;
+    margin-bottom: 1rem;
+    width: 90vw;
+    height: 5vh;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+width: 100vw;
+height: 5vh;
+
+position: fixed;
+bottom: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+
+background:  cyan;
+}

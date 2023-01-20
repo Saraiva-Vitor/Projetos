@@ -1,0 +1,94 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    width: 100vw;
+    height: 15vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: #A50010;
+}
+
+.container{
+    width: 100vw;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.card-title{
+    width: 50%;
+    height: 2.4rem;
+    background-color: black;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: -1.2rem;
+    z-index: 10;
+}
+
+.card-content{
+    width: 60vh;
+    height: 30vh;
+    border-radius: 10px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #A50010;
+}
+
+.button{
+    cursor: pointer;
+    margin: 2rem;
+    width: 60vh;
+    height: 10vh;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #A50010;
+}
+
+.footer{
+width: 100vw;
+height: 10vh;
+
+position: fixed;
+bottom: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: white;
+background: #A50010;
+}

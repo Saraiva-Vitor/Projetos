@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento Serra Jr. Engenharia - Dia 2.1</title>
+    <link rel="stylesheet"href="estilos/style.css">
+</head>
+
+<script>
+function soma(){
+    var valor1 = parseFloat(document.getElementById('sm1').value, 10);
+    var valor2 = parseFloat(document.getElementById('sm2').value, 10);
+    document.getElementById('smres').value = valor1 + valor2;
+}
+
+function subtracao(){
+    var valor1 = parseFloat(document.getElementById('sb1').value, 10);
+    var valor2 = parseFloat(document.getElementById('sb2').value, 10);
+    document.getElementById('sbres').value = valor1 - valor2;
+}
+
+function multiplicacao(){
+    var valor1 = parseFloat(document.getElementById('mt1').value, 10);
+    var valor2 = parseFloat(document.getElementById('mt2').value, 10);
+    document.getElementById('mtres').value = valor1 * valor2;
+}
+
+function divisao(){
+    var valor1 = parseFloat(document.getElementById('dv1').value, 10);
+    var valor2 = parseFloat(document.getElementById('dv2').value, 10);
+    document.getElementById('dvres').value = valor1 / valor2;
+}
+</script>
+
+<body>
+<div class="container">
+    <div class="titulo"><h1>Serra Calculator</h1></div>
+    <div class="som">
+        <h2>Soma</h2>
+        <form action="" method="post">
+            <big>Numero 1: </big><input id="sm1" type="text" value="2" onfocus="soma()"/>
+            <br>
+            <big>Numero 2: </big><input id="sm2" type="text" value="1" onblur="soma()"/>
+            <br>
+            <big>Resultado: </big><input id="smres" type="text"/>
+        </form>
+    </div>
+    <div class="sub">
+        <h2>Subtracao</h2>
+        <form action="" method="post">
+            <big>Numero 1: </big><input id="sb1" type="text" value="2" onfocus="subtracao()"/>
+            <br>
+            <big>Numero 2: </big><input id="sb2" type="text" value="1" onblur="subtracao()"/>
+            <br>
+            <big>Resultado: </big><input id="sbres" type="text"/>
+        </form>
+    </div>
+    <div class="mult">
+        <h2>Multiplicacao</h2>
+        <form action="" method="post">
+            <big>Numero 1: </big><input id="mt1" type="text" value="2" onfocus="multiplicacao()"/>
+            <br>
+            <big>Numero 2: </big><input id="mt2" type="text" value="2" onblur="multiplicacao()"/>
+            <br>
+            <big>Resultado: </big><input id="mtres" type="text"/>
+        </form>
+    </div>
+    <div class="div">
+        <h2>Divisao</h2>
+        <form action="" method="post">
+            <big>Numero 1: </big><input id="dv1" type="text" value="2" onfocus="divisao()"/>
+            <br>
+            <big>Numero 2: </big><input id="dv2" type="text" value="2" onblur="divisao()"/>
+            <br>
+            <big>Resultado: </big><input id="dvres" type="text"/>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

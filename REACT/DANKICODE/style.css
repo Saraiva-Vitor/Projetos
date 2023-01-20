@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    transition: 1s;
+    position: relative;
+    left: 0;
+}
+.box:hover{
+    left: 90px;
+}

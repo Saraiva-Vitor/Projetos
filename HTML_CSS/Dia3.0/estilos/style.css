@@ -1,0 +1,106 @@
+body{
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+}
+
+header{
+position: absolute;
+width: 1440px;
+height: 128px;
+left: 0px;
+top: 0px;
+text-align: center;
+
+background: #A50010;
+color: #FFFFFF;
+}
+
+footer{
+position: absolute;
+width: 1440px;
+height: 68px;
+left: 0px;
+top: 956px;
+text-align: center;
+
+background: #A50010;
+color: #FFFFFF;
+}
+
+.texto{
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    color: white;
+}
+
+.card1{
+position: absolute;
+width: 310px;
+height: 314px;
+left: 183px;
+top: 355px;
+background: #A50010;
+border-radius: 7px;
+}
+
+.nome1{
+position: absolute;
+width: 153px;
+height: 57px;
+left: 79px;
+top: -29px;
+text-align: center;
+
+background: #000000;
+color: white;
+}
+
+.card2{
+position: absolute;
+width: 310px;
+height: 314px;
+left: 565px;
+top: 355px;
+
+background: #A50010;
+border-radius: 7px;
+}
+
+.nome2{
+position: absolute;
+width: 153px;
+height: 57px;
+left: 79px;
+top: -29px;
+text-align: center;
+
+background: #000000;
+color: white;
+}
+
+.card3{
+position: absolute;
+width: 310px;
+height: 314px;
+left: 947px;
+top: 355px;
+
+background: #A50010;
+border-radius: 7px;
+}
+
+.nome3{
+position: absolute;
+width: 153px;
+height: 57px;
+left: 79px;
+top: -29px;
+text-align: center;
+
+background: #000000;
+color: white;
+}

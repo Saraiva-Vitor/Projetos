@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento Serra Jr. Engenharia - Dia 6.0/7.0</title>
+    <link rel="stylesheet"href="estilos/style.css">
+</head>
+
+<body>
+    <div class="menu"><h1>Nome Squad</h1></div>
+    <div class="container">
+            <div class="form">
+                <h1>Receitas</h1>
+                <input id="txt_nome" type="text" class="input" placeholder="Nome"> 
+                <input id="txt_tmp" type="number" class="input" placeholder="Tempo de Preparo"> 
+                <input id="txt_cat" type="text" class="input" placeholder="Categoria"> 
+                <input id="button" class="button" type="button" value="➕ Adicionar" onclick="add()">
+                <input class="card-button" type="button" value="✖️ Remover Última Receita" onclick="remove(this)">
+            </div>
+            <br><br><br>
+            <div id="destino"></div>
+            <h2>EXEMPLO</h2>
+                <div id="origem" class="card">
+                    <div id="resposta" class="card-content">
+                        <h2>Nome</h2>
+                        <h3>Tempo</h3>
+                        <h3>Categoria</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><h3>COPYRIGHT Ⓒ 2022 - SERRA JUNIOR ENGENHARIA</h3></div>
+</body>
+
+<script src="scripts/scripts.js"></script>
+
+</html>
